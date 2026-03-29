@@ -59,5 +59,5 @@ form.addEventListener("submit", function(e){
     `Name: ${name}\nPhone: ${phone}\nCompany/Candidate: ${company}\nRole/Need: ${role}\n\nMessage:\n${message}`
   );
 
-  window.location.href = `mailto:amglobalhireinfo@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:infoamglobalhire@gmail.com?subject=${subject}&body=${body}`;
 });
