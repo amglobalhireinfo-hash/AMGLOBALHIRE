@@ -50,14 +50,19 @@ form.addEventListener("submit", function(e){
   e.preventDefault();
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
-  const company = document.getElementById("company").value;
+  const location = document.getElementById("location").value;
   const role = document.getElementById("role").value;
-  const message = document.getElementById("message").value;
+  const experience = document.getElementById("experience").value;
 
-  const subject = encodeURIComponent("AMGLOBALHIRE Website Enquiry");
   const body = encodeURIComponent(
-    `Name: ${name}\nPhone: ${phone}\nCompany/Candidate: ${company}\nRole/Need: ${role}\n\nMessage:\n${message}`
+`Quick Apply / Hiring Enquiry
+
+1. Your Name: ${name}
+2. Contact number: ${phone}
+3. Location / nearest station: ${location}
+4. Looking for which Profile / Role: ${role}
+5. Experience or Fresher (if experience - into which profile and number of years): ${experience}`
   );
 
-  window.location.href = `mailto:amglobalhireinfo@gmail.com?subject=${subject}&body=${body}`;
+  window.open(`https://wa.me/919594810744?text=${body}`, "_blank");
 });
