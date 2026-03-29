@@ -1,10 +1,12 @@
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
 
-menuBtn.addEventListener("click", () => menu.classList.toggle("show"));
-document.querySelectorAll(".menu a").forEach(link => {
-  link.addEventListener("click", () => menu.classList.remove("show"));
-});
+if (menuBtn && menu) {
+  menuBtn.addEventListener("click", () => menu.classList.toggle("show"));
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => menu.classList.remove("show"));
+  });
+}
 
 const reveals = document.querySelectorAll(".reveal");
 function revealOnScroll() {
@@ -46,18 +48,24 @@ window.addEventListener("scroll", runCounters);
 runCounters();
 
 const form = document.getElementById("contactForm");
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const company = document.getElementById("company").value;
-  const role = document.getElementById("role").value;
-  const message = document.getElementById("message").value;
+if (form) {
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = document.getElementById("name")?.value?.trim() || "";
+    const phone = document.getElementById("phone")?.value?.trim() || "";
+    const location = document.getElementById("location")?.value?.trim() || "";
+    const role = document.getElementById("role")?.value?.trim() || "";
+    const experience = document.getElementById("experience")?.value?.trim() || "";
 
-  const subject = encodeURIComponent("AMGLOBALHIRE Website Enquiry");
-  const body = encodeURIComponent(
-    `Name: ${name}\nPhone: ${phone}\nCompany/Candidate: ${company}\nRole/Need: ${role}\n\nMessage:\n${message}`
-  );
+    const message = `Quick Apply / Hiring Enquiry
 
-  window.location.href = `mailto:amglobalhireinfo@gmail.com?subject=${subject}&body=${body}`;
-});
+1. Your Name: ${name}
+2. Contact number: ${phone}
+3. Location / nearest station: ${location}
+4. Looking for which Profile / Role: ${role}
+5. Experience or Fresher (if experience - into which profile and number of years): ${experience}`;
+
+    const whatsappURL = `https://wa.me/919594810744?text=${encodeURIComponent(message)}`;
+    window.location.href = whatsappURL;
+  });
+}
