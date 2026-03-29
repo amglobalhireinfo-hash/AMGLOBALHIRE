@@ -202,25 +202,6 @@
   </div>
 </section>
 
-<section class="form-section section">
-  <div class="container form-wrap reveal">
-    <div>
-      <span class="section-tag">Quick Apply / Hiring Enquiry</span>
-      <h2>Simple contact form</h2>
-      <p>This form opens WhatsApp with your details pre-filled.</p>
-    </div>
-
-    <form id="contactForm" class="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="text" id="phone" placeholder="Contact number" required>
-      <input type="text" id="location" placeholder="Location / nearest station" required>
-      <input type="text" id="role" placeholder="Looking for which Profile / Role" required>
-      <textarea id="experience" rows="5" placeholder="Experience or Fresher (if experience - into which profile and number of years)" required></textarea>
-      <button type="button" id="sendDetailsBtn" class="btn primary">Send Details</button>
-    </form>
-  </div>
-</section>
-
 <section class="testimonials section" id="testimonials">
   <div class="container">
     <div class="section-head reveal">
@@ -261,7 +242,26 @@
   </div>
 </section>
 
+<section class="contact-form-section" id="quick-apply">
+  <h2>Quick Apply / Hiring Enquiry</h2>
+  <p>Simple contact form</p>
+  <p>This form opens WhatsApp with your details pre-filled.</p>
 
+  <form id="quickApplyForm">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="text" id="phone" placeholder="Contact number" required />
+    <input type="text" id="location" placeholder="Location / nearest station" required />
+    <input type="text" id="role" placeholder="Looking for which Profile / Role" required />
+    <textarea
+      id="experience"
+      rows="5"
+      placeholder="Experience or Fresher (if experience - into which profile and number of years)"
+      required
+    ></textarea>
+
+    <button type="button" id="sendDetailsBtn">Send Details</button>
+  </form>
+</section>
 
 <footer class="footer">
   <div class="container footer-wrap">
