@@ -261,27 +261,25 @@
   </div>
 </section>
 
-<section class="contact section" id="contact">
-  <div class="container contact-grid">
-    <div class="contact-left reveal">
-      <span class="section-tag">Contact Us</span>
-      <h2>Need hiring support or want to apply?</h2>
-      <p>Reach AMGLOBALHIRE directly using the details below.</p>
-      <div class="contact-list">
-        <a href="tel:+919594810744"><i class="fa-solid fa-phone"></i> +91 95948 10744</a>
-        <a href="mailto:amglobalhireinfo@gmail.com"><i class="fa-solid fa-envelope"></i> amglobalhireinfo@gmail.com</a>
-        <a href="https://maps.google.com/?q=Gate+no.+7,+Plot+no.+7,+Room+no.+56+NCC+Malwani+Malad+West+Mumbai+400095" target="_blank"><i class="fa-solid fa-location-dot"></i> Gate no. 7, Plot no. 7, Room no. 56 NCC Malwani Malad west Mumbai 400095</a>
-      </div>
-    </div>
-    <div class="contact-card reveal">
-      <h3>Quick Connect</h3>
-      <p>Use these quick actions to connect faster.</p>
-      <div class="quick-buttons">
-        <a href="#" target="_blank" class="btn primary whatsapp-simple">WhatsApp Now</a>
-        <a href="mailto:amglobalhireinfo@gmail.com" class="btn secondary">Send Email</a>
-      </div>
-    </div>
-  </div>
+<section class="contact-form-section" id="quick-apply">
+  <h2>Quick Apply / Hiring Enquiry</h2>
+  <p>Simple contact form</p>
+  <p>This form opens WhatsApp with your details pre-filled.</p>
+
+  <form id="quickApplyForm">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="text" id="phone" placeholder="Contact number" required />
+    <input type="text" id="location" placeholder="Location / nearest station" required />
+    <input type="text" id="role" placeholder="Looking for which Profile / Role" required />
+    <textarea
+      id="experience"
+      rows="5"
+      placeholder="Experience or Fresher (if experience - into which profile and number of years)"
+      required
+    ></textarea>
+
+    <button type="button" id="sendDetailsBtn">Send Details</button>
+  </form>
 </section>
 
 <footer class="footer">
