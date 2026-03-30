@@ -1,59 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/</loc>
+    <priority>1.0</priority>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/logo.png</image:loc>
-      <image:caption>AMGLOBALHIRE Logo</image:caption>
-    </image:image>
   </url>
 
-  <!-- About Section -->
+  <!-- Agar aur pages hain to yaha add karo -->
+  <!--
   <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#about</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Services Section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#services</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Why Us Section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#whyus</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/about.html</loc>
     <priority>0.8</priority>
-  </url>
-
-  <!-- Jobs / Candidate Section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#jobs</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
-
-  <!-- Contact Section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#contact</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Map / Location Section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#map</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  -->
 </urlset>
