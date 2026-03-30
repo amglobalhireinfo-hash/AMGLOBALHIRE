@@ -1,68 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- About section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#about</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Services section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#services</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Why Us / Process section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#whyus</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Jobs / Candidates section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#jobs</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Testimonials section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#testimonials</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- FAQ section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#faq</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Contact section -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#contact</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 
 </urlset>
