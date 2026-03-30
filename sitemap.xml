@@ -9,49 +9,57 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- About page -->
+  <!-- About section -->
   <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/about</loc>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#about</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Services page -->
+  <!-- Services section -->
   <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/services</loc>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#services</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Process page -->
+  <!-- Process section -->
   <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/process</loc>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#whyus</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Jobs page -->
+  <!-- Jobs section -->
   <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/jobs</loc>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#jobs</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- FAQ page -->
+  <!-- Testimonials section -->
   <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/faq</loc>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#testimonials</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Contact page -->
+  <!-- FAQ section -->
   <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/contact</loc>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#faq</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact section -->
+  <url>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#contact</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
