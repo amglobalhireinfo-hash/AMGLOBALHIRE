@@ -4,42 +4,56 @@
   <!-- Homepage -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About section/page -->
+  <!-- About page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/about</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Services section/page -->
+  <!-- Services page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/services</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Process section/page -->
+  <!-- Process page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/process</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Jobs section/page -->
+  <!-- Jobs page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/jobs</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- FAQ section/page -->
+  <!-- FAQ page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/faq</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Contact section/page -->
+  <!-- Contact page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/contact</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
