@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Homepage -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About page -->
+  <!-- About section/page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/about</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact page -->
+  <!-- Services section/page -->
+  <url>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/services</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Process section/page -->
+  <url>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/process</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Jobs section/page -->
+  <url>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/jobs</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ section/page -->
+  <url>
+    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/faq</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact section/page -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/contact</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- BPO Resume page -->
-  <url>
-    <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/bpo-resume</loc>
-    <lastmod>2026-03-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
