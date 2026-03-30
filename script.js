@@ -1,0 +1,63 @@
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => menu.classList.toggle("show"));
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", () => menu.classList.remove("show"));
+});
+
+const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) el.classList.add("active");
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+const counters = document.querySelectorAll(".counter");
+let started = false;
+function runCounters() {
+  const stats = document.querySelector(".stats");
+  if (!stats) return;
+  const top = stats.getBoundingClientRect().top;
+  if (top < window.innerHeight - 100 && !started) {
+    started = true;
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+      const speed = target / 60;
+      const update = () => {
+        count += speed;
+        if (count < target) {
+          counter.innerText = Math.floor(count) + (target === 95 ? "%" : "+");
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target + (target === 95 ? "%" : "+");
+        }
+      };
+      update();
+    });
+  }
+}
+window.addEventListener("scroll", runCounters);
+runCounters();
+
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const company = document.getElementById("company").value;
+  const role = document.getElementById("role").value;
+  const message = document.getElementById("message").value;
+
+  const subject = encodeURIComponent("AMGLOBALHIRE Website Enquiry");
+  const body = encodeURIComponent(
+    `Name: ${name}\nPhone: ${phone}\nCompany/Candidate: ${company}\nRole/Need: ${role}\n\nMessage:\n${message}`
+  );
+
+  window.location.href = `mailto:infoamglobalhire@gmail.com?subject=${subject}&body=${body}`;
+});
