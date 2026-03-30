@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amglobalhireinfo.netlify.app/sitemap.xml
+Sitemap: https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/sitemap.xml
