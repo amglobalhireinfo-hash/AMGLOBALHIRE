@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <changefreq>daily</changefreq>
   </url>
-
-  <!-- About Section -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#about</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Services Section -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#services</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Jobs / Candidates -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#jobs</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Contact -->
   <url>
     <loc>https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/#contact</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
 </urlset>
