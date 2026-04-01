@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://amglobalhireinfo-hash.github.io/AMGLOBALHIRE/sitemap.xml
