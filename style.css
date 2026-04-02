@@ -244,3 +244,65 @@ a{text-decoration:none;color:inherit}
   .hero-wrap{grid-template-columns:1fr}
   .stats-grid,.card-grid,.testimonial-grid{grid-template-columns:1fr}
 }
+/* ===== PREMIUM HERO TITLE ===== */
+
+.hero-title{
+  font-size:clamp(2.5rem,5vw,4rem);
+  line-height:1.2;
+  font-weight:700;
+  margin-bottom:20px;
+  animation:fadeUp 1s ease;
+}
+
+/* BRAND NAME (GRADIENT + ANIMATION) */
+.hero-title .brand{
+  display:block;
+  font-size:clamp(3rem,6vw,5rem);
+  font-weight:800;
+
+  background:linear-gradient(
+    90deg,
+    #00e0ff,
+    #00ffa6,
+    #ffd700,
+    #00e0ff
+  );
+
+  background-size:300% 300%;
+  animation:gradientMove 6s ease infinite;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 0 20px rgba(0,224,255,0.4),
+    0 0 40px rgba(255,215,0,0.3);
+}
+
+/* TAGLINE */
+.hero-title .tagline{
+  display:block;
+  font-size:20px;
+  font-weight:500;
+  color:#cbd5e1;
+  margin-top:12px;
+  letter-spacing:0.5px;
+}
+
+/* ANIMATIONS */
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
