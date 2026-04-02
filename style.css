@@ -205,3 +205,223 @@
 .stat p {
   color: #cbd5e1;
 }
+/* ===== TESLA STYLE GLOBAL CARD DESIGN ===== */
+
+/* ALL TYPES OF BOXES COVERED */
+.stat,
+.service-card,
+.testimonial-card,
+.process-box,
+.about-card,
+.contact-card,
+.candidate-box,
+.form-wrap,
+.map-card,
+.mini-card,
+.logo-row span {
+
+  background: linear-gradient(145deg, #05070f, #0b1325) !important;
+
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.6),
+    0 0 20px rgba(0,224,255,0.12),
+    0 0 30px rgba(255,215,0,0.12),
+    inset 0 0 12px rgba(255,255,255,0.04);
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+/* GOLD + SILVER BORDER (TESLA EDGE LIGHT) */
+.stat::before,
+.service-card::before,
+.testimonial-card::before,
+.process-box::before,
+.about-card::before,
+.contact-card::before,
+.candidate-box::before,
+.form-wrap::before,
+.map-card::before,
+.mini-card::before,
+.logo-row span::before {
+
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+
+  background: linear-gradient(
+    130deg,
+    rgba(255,215,0,0.9),
+    rgba(192,192,192,0.7),
+    rgba(0,224,255,0.7)
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* HOVER = TESLA GLOW */
+.stat:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.process-box:hover,
+.about-card:hover,
+.contact-card:hover,
+.candidate-box:hover,
+.form-wrap:hover,
+.map-card:hover,
+.mini-card:hover,
+.logo-row span:hover {
+
+  transform: translateY(-6px) scale(1.02);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.8),
+    0 0 25px rgba(0,224,255,0.4),
+    0 0 50px rgba(255,215,0,0.5),
+    0 0 70px rgba(192,192,192,0.4);
+}
+
+/* ICON TESLA GLOW */
+.service-card i,
+.mini-card i {
+  color: #8fffe0;
+  text-shadow:
+    0 0 10px rgba(0,224,255,0.8),
+    0 0 20px rgba(255,215,0,0.6);
+}
+
+/* NUMBER GOLD EFFECT */
+.stat h3 {
+  background: linear-gradient(90deg, #00e0ff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TEXT IMPROVEMENT */
+.stat p,
+.mini-card p,
+.service-card p {
+  color: #cbd5e1;
+}
+/* ===== TESLA LIVE ROTATING GLOW BORDER ===== */
+
+/* Ensure box ready */
+.stat,
+.service-card,
+.testimonial-card,
+.process-box,
+.about-card,
+.contact-card,
+.candidate-box,
+.form-wrap,
+.map-card,
+.mini-card,
+.logo-row span {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated rotating border */
+.stat::before,
+.service-card::before,
+.testimonial-card::before,
+.process-box::before,
+.about-card::before,
+.contact-card::before,
+.candidate-box::before,
+.form-wrap::before,
+.map-card::before,
+.mini-card::before,
+.logo-row span::before {
+
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+
+  background: conic-gradient(
+    from 0deg,
+    #ffd700,
+    #c0c0c0,
+    #00e0ff,
+    #ffd700
+  );
+
+  animation: rotateGlow 4s linear infinite;
+
+  z-index: 0;
+}
+
+/* Inner dark layer (important for clean border look) */
+.stat::after,
+.service-card::after,
+.testimonial-card::after,
+.process-box::after,
+.about-card::after,
+.contact-card::after,
+.candidate-box::after,
+.form-wrap::after,
+.map-card::after,
+.mini-card::after,
+.logo-row span::after {
+
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  background: linear-gradient(145deg, #05070f, #0b1325);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* Content always on top */
+.stat *,
+.service-card *,
+.testimonial-card *,
+.process-box *,
+.about-card *,
+.contact-card *,
+.candidate-box *,
+.form-wrap *,
+.map-card *,
+.mini-card *,
+.logo-row span * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Rotation animation */
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hover = Faster + brighter */
+.stat:hover::before,
+.service-card:hover::before,
+.testimonial-card:hover::before,
+.process-box:hover::before,
+.about-card:hover::before,
+.contact-card:hover::before,
+.candidate-box:hover::before,
+.form-wrap:hover::before,
+.map-card:hover::before,
+.mini-card:hover::before,
+.logo-row span:hover::before {
+
+  animation: rotateGlow 1.5s linear infinite;
+
+  filter: brightness(1.5);
+}
