@@ -121,3 +121,87 @@
   opacity: 1;
   left: 100%;
 }
+/* ===== FORCE PREMIUM GOLD SILVER LOOK ===== */
+
+/* Strong override */
+.stat,
+.service-card,
+.testimonial-card,
+.process-box,
+.about-card,
+.contact-card,
+.candidate-box,
+.form-wrap,
+.map-card {
+
+  background: linear-gradient(145deg, #05070f, #0b1325) !important;
+
+  border: 1px solid rgba(255,255,255,0.08) !important;
+
+  box-shadow:
+    0 0 15px rgba(0,224,255,0.15),
+    0 0 30px rgba(255,215,0,0.15),
+    inset 0 0 10px rgba(255,255,255,0.04) !important;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* GOLD + SILVER BORDER GLOW */
+.stat::before,
+.service-card::before,
+.testimonial-card::before,
+.process-box::before,
+.about-card::before,
+.contact-card::before,
+.candidate-box::before,
+.form-wrap::before,
+.map-card::before {
+
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px;
+
+  background: linear-gradient(
+    120deg,
+    #ffd700,
+    #c0c0c0,
+    #00e0ff
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* HOVER = STRONG PREMIUM EFFECT */
+.stat:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.process-box:hover {
+
+  transform: translateY(-6px) scale(1.02);
+
+  box-shadow:
+    0 0 20px rgba(0,224,255,0.4),
+    0 0 40px rgba(255,215,0,0.5),
+    0 0 60px rgba(192,192,192,0.4);
+}
+
+/* NUMBER TEXT GOLD EFFECT */
+.stat h3 {
+  background: linear-gradient(90deg, #00e0ff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TEXT IMPROVEMENT */
+.stat p {
+  color: #cbd5e1;
+}
