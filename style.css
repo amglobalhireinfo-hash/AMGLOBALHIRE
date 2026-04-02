@@ -73,14 +73,34 @@ a{text-decoration:none;color:inherit}
   align-items:center
 }
 
-.hero h1{
-  font-size:clamp(2.3rem,5vw,4.3rem);
-  font-weight:800;
-  margin-bottom:20px
+/* ===== HERO TEXT ===== */
+.hero-title{
+  font-size:clamp(2.5rem,5vw,4rem);
+  line-height:1.2;
+  font-weight:700;
+  margin-bottom:20px;
 }
 
-.hero h1 span{color:#8fffe0}
-.hero p{color:#d9e7fb}
+.hero-title .brand{
+  display:block;
+  font-size:clamp(3rem,6vw,5rem);
+  font-weight:800;
+
+  background:linear-gradient(90deg,#00e0ff,#00ffa6,#ffd700,#00e0ff);
+  background-size:300%;
+
+  animation:gradientMove 6s linear infinite;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-title .tagline{
+  display:block;
+  font-size:20px;
+  color:#cbd5e1;
+  margin-top:10px;
+}
 
 /* ===== BUTTON ===== */
 .btn{
@@ -110,7 +130,7 @@ a{text-decoration:none;color:inherit}
 .showcase-grid{grid-template-columns:repeat(2,1fr)}
 .testimonial-grid{grid-template-columns:repeat(3,1fr)}
 
-/* ===== TESLA BOX DESIGN (MAIN) ===== */
+/* ===== TESLA BOX DESIGN ===== */
 .stat,
 .service-card,
 .testimonial-card,
@@ -132,9 +152,11 @@ a{text-decoration:none;color:inherit}
   box-shadow:
     0 10px 30px rgba(0,0,0,0.6),
     inset 0 0 10px rgba(255,255,255,0.05);
+
+  transition:0.3s;
 }
 
-/* ROTATING BORDER */
+/* ROTATING BORDER (CLEAN) */
 .stat::before,
 .service-card::before,
 .testimonial-card::before,
@@ -152,14 +174,9 @@ a{text-decoration:none;color:inherit}
   inset:-2px;
   border-radius:22px;
 
-  background:conic-gradient(
-    #ffd700,
-    #c0c0c0,
-    #00e0ff,
-    #ffd700
-  );
+  background:conic-gradient(#ffd700,#c0c0c0,#00e0ff,#ffd700);
 
-  animation:rotateBorder 4s linear infinite;
+  animation:rotateBorder 6s linear infinite;
 }
 
 /* INNER LAYER */
@@ -182,7 +199,7 @@ a{text-decoration:none;color:inherit}
   background:linear-gradient(145deg,#05070f,#0b1325);
 }
 
-/* CONTENT ABOVE */
+/* CONTENT FIX */
 .stat *,
 .service-card *,
 .testimonial-card *,
@@ -198,30 +215,27 @@ a{text-decoration:none;color:inherit}
   z-index:2;
 }
 
-/* ANIMATION */
-@keyframes rotateBorder{
-  0%{transform:rotate(0deg)}
-  100%{transform:rotate(360deg)}
-}
-
 /* HOVER */
-.stat:hover::before,
-.service-card:hover::before,
-.testimonial-card:hover::before,
-.process-box:hover::before,
-.about-card:hover::before,
-.contact-card:hover::before,
-.candidate-box:hover::before,
-.form-wrap:hover::before,
-.map-card:hover::before,
-.mini-card:hover::before,
-.logo-row span:hover::before{
+.stat:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.process-box:hover,
+.about-card:hover,
+.contact-card:hover,
+.candidate-box:hover,
+.form-wrap:hover,
+.map-card:hover,
+.mini-card:hover,
+.logo-row span:hover{
 
-  animation:rotateBorder 1.5s linear infinite;
-  filter:brightness(1.5);
+  transform:translateY(-5px);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.9),
+    0 0 20px rgba(255,215,0,0.3),
+    0 0 30px rgba(0,224,255,0.3);
 }
 
-/* TEXT STYLE */
+/* TEXT */
 .stat h3{
   background:linear-gradient(90deg,#00e0ff,#ffd700);
   -webkit-background-clip:text;
@@ -234,6 +248,17 @@ a{text-decoration:none;color:inherit}
   color:#cbd5e1;
 }
 
+/* ===== ANIMATIONS ===== */
+@keyframes rotateBorder{
+  0%{transform:rotate(0)}
+  100%{transform:rotate(360deg)}
+}
+
+@keyframes gradientMove{
+  0%{background-position:0%}
+  100%{background-position:300%}
+}
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:980px){
   .hero-wrap{grid-template-columns:1fr 1fr}
@@ -243,66 +268,4 @@ a{text-decoration:none;color:inherit}
 @media(max-width:700px){
   .hero-wrap{grid-template-columns:1fr}
   .stats-grid,.card-grid,.testimonial-grid{grid-template-columns:1fr}
-}
-/* ===== PREMIUM HERO TITLE ===== */
-
-.hero-title{
-  font-size:clamp(2.5rem,5vw,4rem);
-  line-height:1.2;
-  font-weight:700;
-  margin-bottom:20px;
-  animation:fadeUp 1s ease;
-}
-
-/* BRAND NAME (GRADIENT + ANIMATION) */
-.hero-title .brand{
-  display:block;
-  font-size:clamp(3rem,6vw,5rem);
-  font-weight:800;
-
-  background:linear-gradient(
-    90deg,
-    #00e0ff,
-    #00ffa6,
-    #ffd700,
-    #00e0ff
-  );
-
-  background-size:300% 300%;
-  animation:gradientMove 6s ease infinite;
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  text-shadow:
-    0 0 20px rgba(0,224,255,0.4),
-    0 0 40px rgba(255,215,0,0.3);
-}
-
-/* TAGLINE */
-.hero-title .tagline{
-  display:block;
-  font-size:20px;
-  font-weight:500;
-  color:#cbd5e1;
-  margin-top:12px;
-  letter-spacing:0.5px;
-}
-
-/* ANIMATIONS */
-@keyframes gradientMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
 }
