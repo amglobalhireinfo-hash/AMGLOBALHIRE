@@ -13,7 +13,15 @@ a{text-decoration:none;color:inherit}
 .container{width:min(1120px,92%);margin:auto}
 .section{padding:90px 0}
 
-/* ===== HERO TITLE PREMIUM DESIGN (FIXED) ===== */
+/* ===== FIX: REMOVE DEFAULT H1 CONFLICT ===== */
+.hero h1{
+  font-size:inherit;
+  line-height:inherit;
+  margin:0;
+  font-weight:inherit;
+}
+
+/* ===== HERO TITLE PREMIUM DESIGN ===== */
 .hero-title{
   font-size:clamp(2.5rem,5vw,4rem);
   line-height:1.2;
@@ -35,10 +43,10 @@ a{text-decoration:none;color:inherit}
 
 .hero-title .tagline{
   display:block;
-  font-size:20px;
+  font-size:18px; /* thoda chota kiya for balance */
   font-weight:500;
   color:#d1d5db;
-  margin-top:10px;
+  margin-top:8px;
 }
 
 @keyframes fadeInUp{
@@ -46,7 +54,7 @@ a{text-decoration:none;color:inherit}
   to{opacity:1;transform:translateY(0)}
 }
 
-/* ===== EXISTING DESIGN (UNCHANGED) ===== */
+/* ===== EXISTING DESIGN ===== */
 .section-tag{display:inline-block;padding:8px 16px;background:rgba(0,255,180,.08);border:1px solid rgba(0,255,180,.2);border-radius:999px;color:#8fffe0;font-size:.9rem;margin-bottom:16px}
 .section-head{text-align:center;margin-bottom:42px}
 .section-head h2{font-size:clamp(1.8rem,4vw,3rem)}
