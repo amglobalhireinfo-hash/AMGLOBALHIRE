@@ -995,3 +995,336 @@ a{
     padding:24px;
   }
 }
+/* =========================================================
+   AMGLOBALHIRE — GOLDEN FRAME PREMIUM BOX DESIGN
+   Paste this at the VERY END of your current CSS
+========================================================= */
+
+/* ===== UNIVERSAL PREMIUM BOX LOOK ===== */
+.service-card,
+.process-box,
+.testimonial-card,
+.about-card,
+.contact-card,
+.candidate-box,
+.form-wrap,
+.map-card,
+.mini-card,
+.stat,
+.logo-row span,
+.faq-item,
+.showcase-card,
+.industry-box,
+.industry-item,
+.pill,
+.role-box,
+.role-item,
+.job-box,
+.job-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px !important;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(70,90,255,0.18), transparent 55%),
+    linear-gradient(180deg, #111526 0%, #0b1020 48%, #070b16 100%) !important;
+  border: 2px solid rgba(255,190,60,0.95) !important;
+  box-shadow:
+    0 0 0 2px rgba(255,220,120,0.20),
+    0 8px 20px rgba(0,0,0,0.45),
+    0 18px 45px rgba(0,0,0,0.42),
+    inset 0 2px 4px rgba(255,255,255,0.10),
+    inset 0 -10px 18px rgba(0,0,0,0.28),
+    inset 0 0 28px rgba(60,90,255,0.16),
+    0 0 20px rgba(255,175,0,0.10) !important;
+  transition: all .35s ease;
+}
+
+/* ===== OUTER GOLD RING ===== */
+.service-card::before,
+.process-box::before,
+.testimonial-card::before,
+.about-card::before,
+.contact-card::before,
+.candidate-box::before,
+.form-wrap::before,
+.map-card::before,
+.mini-card::before,
+.stat::before,
+.logo-row span::before,
+.faq-item::before,
+.showcase-card::before,
+.industry-box::before,
+.industry-item::before,
+.pill::before,
+.role-box::before,
+.role-item::before,
+.job-box::before,
+.job-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    #fff4b8 0%,
+    #ffc83d 20%,
+    #ffb100 45%,
+    #ffd76a 65%,
+    #fff0b0 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* ===== INNER SHINY LINE ===== */
+.service-card::after,
+.process-box::after,
+.testimonial-card::after,
+.about-card::after,
+.contact-card::after,
+.candidate-box::after,
+.form-wrap::after,
+.map-card::after,
+.mini-card::after,
+.stat::after,
+.logo-row span::after,
+.faq-item::after,
+.showcase-card::after,
+.industry-box::after,
+.industry-item::after,
+.pill::after,
+.role-box::after,
+.role-item::after,
+.job-box::after,
+.job-item::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background:
+    linear-gradient(125deg,
+      rgba(255,255,255,0.10) 0%,
+      rgba(255,255,255,0.03) 18%,
+      transparent 30%,
+      transparent 55%,
+      rgba(255,255,255,0.05) 72%,
+      rgba(255,255,255,0.02) 100%);
+  pointer-events: none;
+}
+
+/* ===== HOVER ===== */
+.service-card:hover,
+.process-box:hover,
+.testimonial-card:hover,
+.about-card:hover,
+.contact-card:hover,
+.candidate-box:hover,
+.form-wrap:hover,
+.map-card:hover,
+.mini-card:hover,
+.stat:hover,
+.logo-row span:hover,
+.faq-item:hover,
+.showcase-card:hover,
+.industry-box:hover,
+.industry-item:hover,
+.pill:hover,
+.role-box:hover,
+.role-item:hover,
+.job-box:hover,
+.job-item:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 0 0 2px rgba(255,220,120,0.30),
+    0 12px 28px rgba(0,0,0,0.52),
+    0 22px 55px rgba(0,0,0,0.50),
+    inset 0 2px 4px rgba(255,255,255,0.12),
+    inset 0 -10px 18px rgba(0,0,0,0.32),
+    inset 0 0 34px rgba(70,100,255,0.20),
+    0 0 30px rgba(255,185,0,0.18);
+}
+
+/* ===== SERVICE / CARD TEXT ===== */
+.service-card h3,
+.process-box h3,
+.testimonial-card h4,
+.about-card h3,
+.contact-card h3,
+.candidate-box h2,
+.form-wrap h2,
+.stat h3,
+.mini-card h4,
+.logo-row span,
+.faq-item summary,
+.showcase-card h3 {
+  color: #fff7da !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+}
+
+.service-card p,
+.process-box p,
+.testimonial-card p,
+.about-card p,
+.contact-card p,
+.candidate-box p,
+.form-wrap p,
+.stat p,
+.mini-card p,
+.faq-item p,
+.showcase-card p {
+  color: #e6ebff !important;
+}
+
+/* ===== ICONS ===== */
+.service-card i,
+.process-box i,
+.mini-card i,
+.stat i,
+.contact-list i {
+  color: #ffd24f !important;
+  text-shadow:
+    0 0 8px rgba(255,200,60,0.45),
+    0 0 16px rgba(255,170,0,0.22);
+}
+
+/* =========================================================
+   INDUSTRY / SMALL BOXES (BPO, Retail, Sales etc)
+========================================================= */
+.logo-row span,
+.industry-box,
+.industry-item,
+.pill,
+.role-box,
+.role-item,
+.job-box,
+.job-item {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 22px 18px !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  color: #fff3c6 !important;
+}
+
+/* If your industries are inside ul/li or divs */
+ul li,
+.roles li,
+.industries li {
+  list-style: none;
+}
+
+/* =========================================================
+   APPLY BUTTONS / CTA BUTTONS
+========================================================= */
+.btn,
+button,
+.contact-list a,
+.candidate-actions a,
+.candidate-actions .btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px !important;
+  border: 2px solid rgba(255,190,60,0.95) !important;
+  background:
+    linear-gradient(180deg, #182341 0%, #0c1328 100%) !important;
+  color: #fff5cf !important;
+  box-shadow:
+    0 0 0 2px rgba(255,220,120,0.18),
+    0 10px 24px rgba(0,0,0,0.35),
+    inset 0 2px 3px rgba(255,255,255,0.10),
+    inset 0 -10px 18px rgba(0,0,0,0.24),
+    inset 0 0 20px rgba(60,90,255,0.18) !important;
+}
+
+.btn::before,
+button::before,
+.contact-list a::before,
+.candidate-actions a::before,
+.candidate-actions .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.16),
+    transparent 25%,
+    transparent 70%,
+    rgba(255,220,120,0.08)
+  );
+  pointer-events: none;
+}
+
+.btn:hover,
+button:hover,
+.contact-list a:hover,
+.candidate-actions a:hover,
+.candidate-actions .btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 0 2px rgba(255,220,120,0.28),
+    0 14px 32px rgba(0,0,0,0.42),
+    inset 0 2px 3px rgba(255,255,255,0.12),
+    inset 0 -10px 18px rgba(0,0,0,0.28),
+    inset 0 0 26px rgba(70,100,255,0.22),
+    0 0 22px rgba(255,180,0,0.15);
+}
+
+/* White main CTA ko premium dark-gold bana do */
+.btn.primary {
+  background:
+    linear-gradient(180deg, #20315a 0%, #10182e 100%) !important;
+  color: #fff6d6 !important;
+}
+
+/* =========================================================
+   MOBILE BOX SPACING
+========================================================= */
+@media (max-width:700px){
+  .service-card,
+  .process-box,
+  .testimonial-card,
+  .about-card,
+  .contact-card,
+  .candidate-box,
+  .form-wrap,
+  .map-card,
+  .mini-card,
+  .stat,
+  .logo-row span,
+  .faq-item,
+  .showcase-card,
+  .industry-box,
+  .industry-item,
+  .pill,
+  .role-box,
+  .role-item,
+  .job-box,
+  .job-item {
+    border-radius: 30px !important;
+    padding: 26px 22px !important;
+  }
+
+  .logo-row span,
+  .industry-box,
+  .industry-item,
+  .pill,
+  .role-box,
+  .role-item,
+  .job-box,
+  .job-item {
+    min-height: 84px;
+    font-size: 1.05rem;
+  }
+}
