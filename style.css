@@ -151,3 +151,88 @@
   border-radius: 10px;
   background: transparent;
 }
+/* ===== GLASS BASE (SAME) ===== */
+
+.service-card,
+.stat,
+.process-box,
+.testimonial-card,
+.about-card,
+.contact-card,
+.candidate-box,
+.form-wrap,
+.map-card,
+.mini-card,
+.logo-row span {
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* IMPORTANT for sweep */
+}
+
+/* ===== INNER GLASS ===== */
+.service-card::after,
+.stat::after,
+.process-box::after,
+.testimonial-card::after,
+.about-card::after,
+.contact-card::after,
+.candidate-box::after,
+.form-wrap::after,
+.map-card::after,
+.mini-card::after,
+.logo-row span::after {
+
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  z-index: -1;
+}
+
+/* ===== SOFT SWEEP EFFECT ===== */
+.service-card::before,
+.stat::before,
+.process-box::before {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.12),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: sweepMove 7s linear infinite;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes sweepMove {
+  0% { left: -120%; }
+  100% { left: 120%; }
+}
+
+/* ===== HOVER GLASS BOOST ===== */
+.service-card:hover::after,
+.stat:hover::after,
+.process-box:hover::after,
+.testimonial-card:hover::after {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+}
