@@ -55,6 +55,16 @@
     ]
   }
   </script>
+  <script>
+const question = document.querySelector("textarea");
+const btn = document.querySelector("button");
+
+btn.disabled = true;
+
+question.addEventListener("input", () => {
+  btn.disabled = question.value.trim() === "";
+});
+</script>
 </head>
 <body>
 
