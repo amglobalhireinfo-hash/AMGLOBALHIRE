@@ -151,3 +151,73 @@
   border-radius: 10px;
   background: transparent;
 }
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+
+  background: linear-gradient(90deg, #00f2fe, #4facfe, #43e97b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-title span {
+  display: block;
+  font-size: 46px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-title {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* AMGLOBALHIRE */
+.hero-title .brand {
+  display: block;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Niche wala text */
+.hero-title .tagline {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-top: 10px;
+}
+
+/* Smooth animation */
+.hero-title {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
