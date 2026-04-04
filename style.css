@@ -239,9 +239,7 @@
 
 /* ===== ORIGINAL CSS START ===== */
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#07111f,#0b1730 50%,#08101d 100%);color:#eaf2ff;line-height:1.7;overflow-x:hidden}
+
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 .container{width:min(1120px,92%);margin:auto}
