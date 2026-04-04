@@ -1,6 +1,6 @@
 /* =========================================================
-   AMGLOBALHIRE — FINAL ULTRA PREMIUM PLATINUM CSS
-   HTML / FORM / BUTTON / SCRIPT SAFE
+   AMGLOBALHIRE — FINAL ULTRA PREMIUM PLATINUM + GOLD CSS
+   FULL READY / HTML-FORM-BUTTON-SCRIPT SAFE
 ========================================================= */
 
 :root{
@@ -13,17 +13,16 @@
   --text:#f7fbff;
   --muted:#c9d7ea;
 
-  /* PREMIUM PLATINUM COLORS */
-  --gold1:#eef4ff;
-  --gold2:#cfd9e8;
-  --gold3:#95a8c4;
+  --gold1:#fff4b8;
+  --gold2:#ffc83d;
+  --gold3:#ffb100;
 
   --silver:#f3f7fd;
   --blue1:#d7ebff;
   --blue2:#89c2ff;
   --blue3:#4b7fd8;
 
-  --glowGold:rgba(207,217,232,.16);
+  --glowGold:rgba(255,200,60,.16);
   --glowBlue:rgba(137,194,255,.14);
 
   --shadow:0 24px 70px rgba(0,0,0,.35);
@@ -50,9 +49,9 @@ body{
   line-height:1.75;
   overflow-x:hidden;
   background:
-    radial-gradient(circle at 12% 10%, rgba(207,217,232,.10), transparent 18%),
+    radial-gradient(circle at 12% 10%, rgba(255,190,60,.08), transparent 18%),
     radial-gradient(circle at 88% 12%, rgba(137,194,255,.10), transparent 22%),
-    radial-gradient(circle at 50% 100%, rgba(207,217,232,.05), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(255,190,60,.04), transparent 28%),
     linear-gradient(135deg, #02060c 0%, #08111f 40%, #03111d 100%);
   position:relative;
 }
@@ -106,12 +105,12 @@ a{
   gap:8px;
   padding:10px 18px;
   border-radius:999px;
-  background:linear-gradient(135deg, rgba(207,217,232,.16), rgba(255,255,255,.04));
-  border:1px solid rgba(207,217,232,.24);
-  color:#e9f3ff;
+  background:linear-gradient(135deg, rgba(255,200,60,.16), rgba(255,255,255,.04));
+  border:1px solid rgba(255,190,60,.24);
+  color:#fff6d6;
   font-size:.9rem;
   margin-bottom:18px;
-  box-shadow:0 12px 30px rgba(137,194,255,.08);
+  box-shadow:0 12px 30px rgba(255,190,60,.08);
   backdrop-filter:blur(10px);
 }
 
@@ -172,7 +171,7 @@ a{
   border-radius:18px;
   background:
     radial-gradient(circle at 28% 24%, rgba(255,255,255,.38), transparent 18%),
-    linear-gradient(145deg, #f7fbff 0%, #dce7f5 26%, #9eb4cf 60%, #5c6f89 100%);
+    linear-gradient(145deg, #fff8df 0%, #ffd76a 26%, #ffb100 60%, #7b5200 100%);
   display:grid;
   place-items:center;
   font-weight:800;
@@ -262,7 +261,7 @@ a{
   padding:115px 0 80px;
   overflow:hidden;
   background:
-    radial-gradient(circle at 16% 20%, rgba(207,217,232,.12), transparent 18%),
+    radial-gradient(circle at 16% 20%, rgba(255,190,60,.10), transparent 18%),
     radial-gradient(circle at 85% 15%, rgba(137,194,255,.12), transparent 22%),
     linear-gradient(135deg, #020913 0%, #08172c 46%, #03101c 100%);
 }
@@ -291,7 +290,7 @@ a{
   position:absolute;
   width:580px;
   height:580px;
-  background:rgba(137,194,255,.08);
+  background:rgba(255,190,60,.07);
   filter:blur(115px);
   border-radius:50%;
   top:-120px;
@@ -309,13 +308,13 @@ a{
 .hero-badge{
   display:inline-block;
   padding:11px 18px;
-  border:1px solid rgba(207,217,232,.28);
-  background:linear-gradient(135deg, rgba(207,217,232,.16), rgba(255,255,255,.04));
+  border:1px solid rgba(255,190,60,.28);
+  background:linear-gradient(135deg, rgba(255,190,60,.16), rgba(255,255,255,.04));
   border-radius:999px;
   font-size:.92rem;
   margin-bottom:22px;
-  color:#edf5ff;
-  box-shadow:0 10px 28px rgba(137,194,255,.08);
+  color:#fff4d0;
+  box-shadow:0 10px 28px rgba(255,190,60,.08);
   backdrop-filter:blur(10px);
 }
 
@@ -330,7 +329,7 @@ a{
 }
 
 .hero h1 span{
-  background:linear-gradient(135deg, #f7fbff, #d9e8f7, #7fb2e8);
+  background:linear-gradient(135deg, #fff8e6, #ffd76a, #89c2ff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -352,43 +351,59 @@ a{
 
 .btn{
   padding:15px 24px;
-  border-radius:18px;
+  border-radius:999px !important;
   font-weight:700;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   transition:.35s ease;
-  border:none;
+  border:2px solid rgba(255,190,60,0.95) !important;
   cursor:pointer;
   letter-spacing:.2px;
-  box-shadow:0 14px 30px rgba(0,0,0,.18);
+  box-shadow:
+    0 0 0 2px rgba(255,220,120,0.18),
+    0 10px 24px rgba(0,0,0,0.35),
+    inset 0 2px 3px rgba(255,255,255,0.10),
+    inset 0 -10px 18px rgba(0,0,0,0.24),
+    inset 0 0 20px rgba(60,90,255,0.18) !important;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  background:linear-gradient(
+    135deg,
+    rgba(255,255,255,0.16),
+    transparent 25%,
+    transparent 70%,
+    rgba(255,220,120,0.08)
+  );
+  pointer-events:none;
 }
 
 .btn.primary{
-  background:linear-gradient(135deg, #f7fbff, #dce8f7, #8fb3d9);
-  color:#08111f;
-  box-shadow:
-    0 16px 42px rgba(137,194,255,.22),
-    inset 0 1px 0 rgba(255,255,255,.25);
-}
-
-.btn.primary:hover{
-  transform:translateY(-4px) scale(1.01);
-  box-shadow:
-    0 24px 50px rgba(137,194,255,.28),
-    inset 0 1px 0 rgba(255,255,255,.25);
+  background:linear-gradient(180deg, #20315a 0%, #10182e 100%) !important;
+  color:#fff6d6 !important;
 }
 
 .btn.secondary{
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.06);
-  color:#fff;
-  backdrop-filter:blur(12px);
+  background:linear-gradient(180deg, #182341 0%, #0c1328 100%) !important;
+  color:#fff5cf !important;
 }
 
-.btn.secondary:hover{
-  transform:translateY(-4px);
-  border-color:rgba(207,217,232,.24);
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 0 0 2px rgba(255,220,120,0.28),
+    0 14px 32px rgba(0,0,0,0.42),
+    inset 0 2px 3px rgba(255,255,255,0.12),
+    inset 0 -10px 18px rgba(0,0,0,0.28),
+    inset 0 0 26px rgba(70,100,255,0.22),
+    0 0 22px rgba(255,180,0,0.15);
 }
 
 .hero-points{
@@ -399,7 +414,7 @@ a{
 }
 
 .hero-points i{
-  color:var(--blue2);
+  color:#ffd24f;
   margin-right:8px;
 }
 
@@ -421,7 +436,7 @@ a{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg, transparent 10%, rgba(207,217,232,0.08) 34%, transparent 56%, rgba(137,194,255,0.08) 84%, transparent 100%);
+  background:linear-gradient(135deg, transparent 10%, rgba(255,190,60,0.08) 34%, transparent 56%, rgba(137,194,255,0.08) 84%, transparent 100%);
   pointer-events:none;
 }
 
@@ -503,19 +518,33 @@ a{
 .map-card,
 .mini-card,
 .logo-row span,
-.faq-item{
+.faq-item,
+.showcase-card,
+.industry-box,
+.industry-item,
+.pill,
+.role-box,
+.role-item,
+.job-box,
+.job-item{
   position:relative;
-  padding:30px;
-  border-radius:var(--radius-lg);
   overflow:hidden;
+  border-radius:34px !important;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
-  border:1px solid var(--stroke);
+    radial-gradient(circle at 50% 30%, rgba(70,90,255,0.18), transparent 55%),
+    linear-gradient(180deg, #111526 0%, #0b1020 48%, #070b16 100%) !important;
+  border:2px solid rgba(255,190,60,0.95) !important;
   box-shadow:
-    0 20px 50px rgba(0,0,0,.28),
-    inset 0 1px 0 rgba(255,255,255,0.04);
-  backdrop-filter:blur(14px);
+    0 0 0 2px rgba(255,220,120,0.20),
+    0 8px 20px rgba(0,0,0,0.45),
+    0 18px 45px rgba(0,0,0,0.42),
+    inset 0 2px 4px rgba(255,255,255,0.10),
+    inset 0 -10px 18px rgba(0,0,0,0.28),
+    inset 0 0 28px rgba(60,90,255,0.16),
+    0 0 20px rgba(255,175,0,0.10) !important;
   transition:all .35s ease;
+  padding:30px;
+  backdrop-filter:blur(14px);
 }
 
 .stat::before,
@@ -529,43 +558,71 @@ a{
 .map-card::before,
 .mini-card::before,
 .logo-row span::before,
-.faq-item::before{
+.faq-item::before,
+.showcase-card::before,
+.industry-box::before,
+.industry-item::before,
+.pill::before,
+.role-box::before,
+.role-item::before,
+.job-box::before,
+.job-item::before{
   content:"";
   position:absolute;
   inset:0;
-  border-radius:var(--radius-lg);
+  border-radius:34px;
+  padding:2px;
   background:linear-gradient(
-    120deg,
-    rgba(207,217,232,0.14),
-    rgba(255,255,255,0.03),
-    rgba(137,194,255,0.10)
+    135deg,
+    #fff4b8 0%,
+    #ffc83d 20%,
+    #ffb100 45%,
+    #ffd76a 65%,
+    #fff0b0 100%
   );
-  opacity:0;
-  transition:.4s;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+  opacity:1;
 }
 
 .stat::after,
 .service-card::after,
-.process-box::after{
+.process-box::after,
+.testimonial-card::after,
+.about-card::after,
+.contact-card::after,
+.candidate-box::after,
+.form-wrap::after,
+.map-card::after,
+.mini-card::after,
+.logo-row span::after,
+.faq-item::after,
+.showcase-card::after,
+.industry-box::after,
+.industry-item::after,
+.pill::after,
+.role-box::after,
+.role-item::after,
+.job-box::after,
+.job-item::after{
   content:"";
   position:absolute;
-  top:0;
-  left:-120%;
-  width:60%;
-  height:100%;
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.14),
-    transparent
-  );
-  transform:skewX(-20deg);
-  animation:sweepMove 6s linear infinite;
-}
-
-@keyframes sweepMove{
-  0%{left:-120%}
-  100%{left:120%}
+  inset:8px;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:
+    linear-gradient(125deg,
+      rgba(255,255,255,0.10) 0%,
+      rgba(255,255,255,0.03) 18%,
+      transparent 30%,
+      transparent 55%,
+      rgba(255,255,255,0.05) 72%,
+      rgba(255,255,255,0.02) 100%);
+  pointer-events:none;
 }
 
 .service-card:hover,
@@ -579,19 +636,24 @@ a{
 .map-card:hover,
 .mini-card:hover,
 .logo-row span:hover,
-.faq-item:hover{
-  transform:translateY(-10px);
+.faq-item:hover,
+.showcase-card:hover,
+.industry-box:hover,
+.industry-item:hover,
+.pill:hover,
+.role-box:hover,
+.role-item:hover,
+.job-box:hover,
+.job-item:hover{
+  transform:translateY(-6px) scale(1.015);
   box-shadow:
-    0 30px 70px rgba(0,0,0,.35),
-    0 0 0 1px rgba(207,217,232,.08),
-    0 0 35px rgba(137,194,255,.10);
-}
-
-.service-card:hover::before,
-.stat:hover::before,
-.process-box:hover::before,
-.faq-item:hover::before{
-  opacity:1;
+    0 0 0 2px rgba(255,220,120,0.30),
+    0 12px 28px rgba(0,0,0,0.52),
+    0 22px 55px rgba(0,0,0,0.50),
+    inset 0 2px 4px rgba(255,255,255,0.12),
+    inset 0 -10px 18px rgba(0,0,0,0.32),
+    inset 0 0 34px rgba(70,100,255,0.20),
+    0 0 30px rgba(255,185,0,0.18);
 }
 
 .stat{
@@ -600,18 +662,20 @@ a{
 
 .stat h3{
   font-size:2.25rem;
-  background:linear-gradient(90deg,#f5f8ff,#d8e3f1,#7eb4ec);
+  background:linear-gradient(90deg,#fff8df,#ffd76a,#89c2ff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
 .service-card i,
 .mini-card i,
-.stat i{
-  color:var(--blue1);
+.stat i,
+.process-box i,
+.contact-list i{
+  color:#ffd24f !important;
   text-shadow:
-    0 0 10px rgba(137,194,255,.25),
-    0 0 20px rgba(207,217,232,.16);
+    0 0 8px rgba(255,200,60,0.45),
+    0 0 16px rgba(255,170,0,0.22);
 }
 
 .service-card i{
@@ -633,25 +697,35 @@ a{
 }
 
 .service-card h3,
+.process-box h3,
+.testimonial-card h4,
+.about-card h3,
+.contact-card h3,
+.candidate-box h2,
+.form-wrap h2,
 .stat h3,
 .mini-card h4,
-.testimonial-card h4,
-.about h2,
-.candidate-box h2,
-.form-wrap h2{
-  color:#fff;
+.logo-row span,
+.faq-item summary,
+.showcase-card h3,
+.about h2{
+  color:#fff7da !important;
+  text-shadow:0 1px 0 rgba(0,0,0,0.35);
 }
 
 .service-card p,
+.process-box p,
+.testimonial-card p,
+.about-card p,
+.contact-card p,
+.candidate-box p,
+.form-wrap p,
 .stat p,
 .mini-card p,
-.about p,
-.form-wrap p,
-.candidate-box p,
-.testimonial-card p,
 .faq-item p,
-.contact-info .service-card p{
-  color:#d4e0ef;
+.showcase-card p,
+.about p{
+  color:#e6ebff !important;
 }
 
 /* =========================
@@ -666,14 +740,14 @@ a{
 
 .logo-strip p{
   text-align:center;
-  color:#9fc9ff;
+  color:#ffd76a;
   margin-bottom:20px;
 }
 
 .logo-row span{
   text-align:center;
   font-weight:600;
-  color:#f5f8ff;
+  color:#fff5cf;
   padding:16px;
 }
 
@@ -681,11 +755,7 @@ a{
    SHOWCASE
 ========================= */
 .showcase-card{
-  position:relative;
-  overflow:hidden;
-  border-radius:30px;
   min-height:340px;
-  border:1px solid rgba(255,255,255,.08);
   box-shadow:var(--shadow);
 }
 
@@ -705,6 +775,7 @@ a{
   inset:auto 0 0 0;
   padding:28px;
   background:linear-gradient(to top,rgba(0,0,0,.82),transparent);
+  z-index:2;
 }
 
 /* =========================
@@ -731,14 +802,12 @@ a{
 
 .contact-list a{
   padding:16px 18px;
-  border-radius:16px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.contact-list i{
-  color:var(--blue2);
-  margin-right:10px;
+  border-radius:18px;
+  background:linear-gradient(180deg, #182341 0%, #0c1328 100%) !important;
+  border:2px solid rgba(255,190,60,0.95) !important;
+  color:#fff5cf !important;
+  position:relative;
+  overflow:hidden;
 }
 
 .quick-buttons{
@@ -776,8 +845,8 @@ a{
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-  border-color:rgba(137,194,255,.45);
-  box-shadow:0 0 0 4px rgba(137,194,255,.08);
+  border-color:rgba(255,190,60,.45);
+  box-shadow:0 0 0 4px rgba(255,190,60,.08);
 }
 
 /* =========================
@@ -794,11 +863,41 @@ a{
 ========================= */
 .map-card{
   padding:14px;
-  overflow:hidden;
 }
 
 .map-card iframe{
   border-radius:20px;
+  width:100%;
+  min-height:320px;
+}
+
+/* =========================
+   SMALL BOXES / INDUSTRIES
+========================= */
+.logo-row span,
+.industry-box,
+.industry-item,
+.pill,
+.role-box,
+.role-item,
+.job-box,
+.job-item{
+  min-height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:22px 18px !important;
+  font-size:1.15rem;
+  font-weight:700;
+  letter-spacing:.3px;
+  color:#fff3c6 !important;
+}
+
+ul li,
+.roles li,
+.industries li{
+  list-style:none;
 }
 
 /* =========================
@@ -982,326 +1081,14 @@ a{
 
   .stat,
   .service-card,
-  .testimony-card,
-  .process-box,
-  .about-card,
-  .contact-card,
-  .candidate-box,
-  .form-wrap,
-  .map-card,
-  .mini-card,
-  .logo-row span,
-  .faq-item{
-    padding:24px;
-  }
-}
-/* =========================================================
-   AMGLOBALHIRE — GOLDEN FRAME PREMIUM BOX DESIGN
-   Paste this at the VERY END of your current CSS
-========================================================= */
-
-/* ===== UNIVERSAL PREMIUM BOX LOOK ===== */
-.service-card,
-.process-box,
-.testimonial-card,
-.about-card,
-.contact-card,
-.candidate-box,
-.form-wrap,
-.map-card,
-.mini-card,
-.stat,
-.logo-row span,
-.faq-item,
-.showcase-card,
-.industry-box,
-.industry-item,
-.pill,
-.role-box,
-.role-item,
-.job-box,
-.job-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 34px !important;
-  background:
-    radial-gradient(circle at 50% 30%, rgba(70,90,255,0.18), transparent 55%),
-    linear-gradient(180deg, #111526 0%, #0b1020 48%, #070b16 100%) !important;
-  border: 2px solid rgba(255,190,60,0.95) !important;
-  box-shadow:
-    0 0 0 2px rgba(255,220,120,0.20),
-    0 8px 20px rgba(0,0,0,0.45),
-    0 18px 45px rgba(0,0,0,0.42),
-    inset 0 2px 4px rgba(255,255,255,0.10),
-    inset 0 -10px 18px rgba(0,0,0,0.28),
-    inset 0 0 28px rgba(60,90,255,0.16),
-    0 0 20px rgba(255,175,0,0.10) !important;
-  transition: all .35s ease;
-}
-
-/* ===== OUTER GOLD RING ===== */
-.service-card::before,
-.process-box::before,
-.testimonial-card::before,
-.about-card::before,
-.contact-card::before,
-.candidate-box::before,
-.form-wrap::before,
-.map-card::before,
-.mini-card::before,
-.stat::before,
-.logo-row span::before,
-.faq-item::before,
-.showcase-card::before,
-.industry-box::before,
-.industry-item::before,
-.pill::before,
-.role-box::before,
-.role-item::before,
-.job-box::before,
-.job-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 34px;
-  padding: 2px;
-  background: linear-gradient(
-    135deg,
-    #fff4b8 0%,
-    #ffc83d 20%,
-    #ffb100 45%,
-    #ffd76a 65%,
-    #fff0b0 100%
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* ===== INNER SHINY LINE ===== */
-.service-card::after,
-.process-box::after,
-.testimonial-card::after,
-.about-card::after,
-.contact-card::after,
-.candidate-box::after,
-.form-wrap::after,
-.map-card::after,
-.mini-card::after,
-.stat::after,
-.logo-row span::after,
-.faq-item::after,
-.showcase-card::after,
-.industry-box::after,
-.industry-item::after,
-.pill::after,
-.role-box::after,
-.role-item::after,
-.job-box::after,
-.job-item::after {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 28px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background:
-    linear-gradient(125deg,
-      rgba(255,255,255,0.10) 0%,
-      rgba(255,255,255,0.03) 18%,
-      transparent 30%,
-      transparent 55%,
-      rgba(255,255,255,0.05) 72%,
-      rgba(255,255,255,0.02) 100%);
-  pointer-events: none;
-}
-
-/* ===== HOVER ===== */
-.service-card:hover,
-.process-box:hover,
-.testimonial-card:hover,
-.about-card:hover,
-.contact-card:hover,
-.candidate-box:hover,
-.form-wrap:hover,
-.map-card:hover,
-.mini-card:hover,
-.stat:hover,
-.logo-row span:hover,
-.faq-item:hover,
-.showcase-card:hover,
-.industry-box:hover,
-.industry-item:hover,
-.pill:hover,
-.role-box:hover,
-.role-item:hover,
-.job-box:hover,
-.job-item:hover {
-  transform: translateY(-6px) scale(1.015);
-  box-shadow:
-    0 0 0 2px rgba(255,220,120,0.30),
-    0 12px 28px rgba(0,0,0,0.52),
-    0 22px 55px rgba(0,0,0,0.50),
-    inset 0 2px 4px rgba(255,255,255,0.12),
-    inset 0 -10px 18px rgba(0,0,0,0.32),
-    inset 0 0 34px rgba(70,100,255,0.20),
-    0 0 30px rgba(255,185,0,0.18);
-}
-
-/* ===== SERVICE / CARD TEXT ===== */
-.service-card h3,
-.process-box h3,
-.testimonial-card h4,
-.about-card h3,
-.contact-card h3,
-.candidate-box h2,
-.form-wrap h2,
-.stat h3,
-.mini-card h4,
-.logo-row span,
-.faq-item summary,
-.showcase-card h3 {
-  color: #fff7da !important;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
-}
-
-.service-card p,
-.process-box p,
-.testimonial-card p,
-.about-card p,
-.contact-card p,
-.candidate-box p,
-.form-wrap p,
-.stat p,
-.mini-card p,
-.faq-item p,
-.showcase-card p {
-  color: #e6ebff !important;
-}
-
-/* ===== ICONS ===== */
-.service-card i,
-.process-box i,
-.mini-card i,
-.stat i,
-.contact-list i {
-  color: #ffd24f !important;
-  text-shadow:
-    0 0 8px rgba(255,200,60,0.45),
-    0 0 16px rgba(255,170,0,0.22);
-}
-
-/* =========================================================
-   INDUSTRY / SMALL BOXES (BPO, Retail, Sales etc)
-========================================================= */
-.logo-row span,
-.industry-box,
-.industry-item,
-.pill,
-.role-box,
-.role-item,
-.job-box,
-.job-item {
-  min-height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 22px 18px !important;
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: .3px;
-  color: #fff3c6 !important;
-}
-
-/* If your industries are inside ul/li or divs */
-ul li,
-.roles li,
-.industries li {
-  list-style: none;
-}
-
-/* =========================================================
-   APPLY BUTTONS / CTA BUTTONS
-========================================================= */
-.btn,
-button,
-.contact-list a,
-.candidate-actions a,
-.candidate-actions .btn {
-  position: relative;
-  overflow: hidden;
-  border-radius: 999px !important;
-  border: 2px solid rgba(255,190,60,0.95) !important;
-  background:
-    linear-gradient(180deg, #182341 0%, #0c1328 100%) !important;
-  color: #fff5cf !important;
-  box-shadow:
-    0 0 0 2px rgba(255,220,120,0.18),
-    0 10px 24px rgba(0,0,0,0.35),
-    inset 0 2px 3px rgba(255,255,255,0.10),
-    inset 0 -10px 18px rgba(0,0,0,0.24),
-    inset 0 0 20px rgba(60,90,255,0.18) !important;
-}
-
-.btn::before,
-button::before,
-.contact-list a::before,
-.candidate-actions a::before,
-.candidate-actions .btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.16),
-    transparent 25%,
-    transparent 70%,
-    rgba(255,220,120,0.08)
-  );
-  pointer-events: none;
-}
-
-.btn:hover,
-button:hover,
-.contact-list a:hover,
-.candidate-actions a:hover,
-.candidate-actions .btn:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    0 0 0 2px rgba(255,220,120,0.28),
-    0 14px 32px rgba(0,0,0,0.42),
-    inset 0 2px 3px rgba(255,255,255,0.12),
-    inset 0 -10px 18px rgba(0,0,0,0.28),
-    inset 0 0 26px rgba(70,100,255,0.22),
-    0 0 22px rgba(255,180,0,0.15);
-}
-
-/* White main CTA ko premium dark-gold bana do */
-.btn.primary {
-  background:
-    linear-gradient(180deg, #20315a 0%, #10182e 100%) !important;
-  color: #fff6d6 !important;
-}
-
-/* =========================================================
-   MOBILE BOX SPACING
-========================================================= */
-@media (max-width:700px){
-  .service-card,
-  .process-box,
   .testimonial-card,
+  .process-box,
   .about-card,
   .contact-card,
   .candidate-box,
   .form-wrap,
   .map-card,
   .mini-card,
-  .stat,
   .logo-row span,
   .faq-item,
   .showcase-card,
@@ -1311,9 +1098,9 @@ button:hover,
   .role-box,
   .role-item,
   .job-box,
-  .job-item {
-    border-radius: 30px !important;
-    padding: 26px 22px !important;
+  .job-item{
+    border-radius:30px !important;
+    padding:26px 22px !important;
   }
 
   .logo-row span,
@@ -1323,8 +1110,8 @@ button:hover,
   .role-box,
   .role-item,
   .job-box,
-  .job-item {
-    min-height: 84px;
-    font-size: 1.05rem;
+  .job-item{
+    min-height:84px;
+    font-size:1.05rem;
   }
 }
