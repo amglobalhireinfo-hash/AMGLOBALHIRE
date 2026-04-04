@@ -1,26 +1,31 @@
 /* =========================================================
-   AMGLOBALHIRE — FINAL LUXURY PREMIUM CSS (LAST VERSION)
+   AMGLOBALHIRE — FINAL ULTRA PREMIUM PLATINUM CSS
    HTML / FORM / BUTTON / SCRIPT SAFE
 ========================================================= */
 
 :root{
-  --bg:#04070d;
-  --bg2:#081321;
-  --bg3:#0d1d35;
+  --bg:#030712;
+  --bg2:#08111f;
+  --bg3:#0c1a2e;
   --card:rgba(255,255,255,0.055);
   --card2:rgba(255,255,255,0.028);
   --stroke:rgba(255,255,255,0.08);
   --text:#f7fbff;
   --muted:#c9d7ea;
-  --gold1:#fff7dd;
-  --gold2:#f5d07b;
-  --gold3:#d89d34;
-  --silver:#e6edf7;
-  --blue1:#a7d6ff;
-  --blue2:#5aaeff;
-  --blue3:#2c6ee8;
-  --glowGold:rgba(245,208,123,.18);
-  --glowBlue:rgba(90,174,255,.16);
+
+  /* PREMIUM PLATINUM COLORS */
+  --gold1:#eef4ff;
+  --gold2:#cfd9e8;
+  --gold3:#95a8c4;
+
+  --silver:#f3f7fd;
+  --blue1:#d7ebff;
+  --blue2:#89c2ff;
+  --blue3:#4b7fd8;
+
+  --glowGold:rgba(207,217,232,.16);
+  --glowBlue:rgba(137,194,255,.14);
+
   --shadow:0 24px 70px rgba(0,0,0,.35);
   --shadow2:0 32px 90px rgba(0,0,0,.45);
   --radius-xl:34px;
@@ -45,10 +50,10 @@ body{
   line-height:1.75;
   overflow-x:hidden;
   background:
-    radial-gradient(circle at 12% 10%, rgba(245,208,123,.10), transparent 18%),
-    radial-gradient(circle at 88% 12%, rgba(90,174,255,.10), transparent 22%),
-    radial-gradient(circle at 50% 100%, rgba(245,208,123,.05), transparent 28%),
-    linear-gradient(135deg, #02060c 0%, #081321 40%, #03111d 100%);
+    radial-gradient(circle at 12% 10%, rgba(207,217,232,.10), transparent 18%),
+    radial-gradient(circle at 88% 12%, rgba(137,194,255,.10), transparent 22%),
+    radial-gradient(circle at 50% 100%, rgba(207,217,232,.05), transparent 28%),
+    linear-gradient(135deg, #02060c 0%, #08111f 40%, #03111d 100%);
   position:relative;
 }
 
@@ -101,12 +106,12 @@ a{
   gap:8px;
   padding:10px 18px;
   border-radius:999px;
-  background:linear-gradient(135deg, rgba(245,208,123,.16), rgba(255,255,255,.04));
-  border:1px solid rgba(245,208,123,.24);
-  color:#ffe9af;
+  background:linear-gradient(135deg, rgba(207,217,232,.16), rgba(255,255,255,.04));
+  border:1px solid rgba(207,217,232,.24);
+  color:#e9f3ff;
   font-size:.9rem;
   margin-bottom:18px;
-  box-shadow:0 12px 30px rgba(245,208,123,.08);
+  box-shadow:0 12px 30px rgba(137,194,255,.08);
   backdrop-filter:blur(10px);
 }
 
@@ -166,8 +171,8 @@ a{
   height:56px;
   border-radius:18px;
   background:
-    radial-gradient(circle at 28% 24%, rgba(255,255,255,.34), transparent 18%),
-    linear-gradient(145deg, #fff4cf 0%, #f5d07b 26%, #d89d34 60%, #7f4d0f 100%);
+    radial-gradient(circle at 28% 24%, rgba(255,255,255,.38), transparent 18%),
+    linear-gradient(145deg, #f7fbff 0%, #dce7f5 26%, #9eb4cf 60%, #5c6f89 100%);
   display:grid;
   place-items:center;
   font-weight:800;
@@ -257,8 +262,8 @@ a{
   padding:115px 0 80px;
   overflow:hidden;
   background:
-    radial-gradient(circle at 16% 20%, rgba(245,208,123,.12), transparent 18%),
-    radial-gradient(circle at 85% 15%, rgba(90,174,255,.12), transparent 22%),
+    radial-gradient(circle at 16% 20%, rgba(207,217,232,.12), transparent 18%),
+    radial-gradient(circle at 85% 15%, rgba(137,194,255,.12), transparent 22%),
     linear-gradient(135deg, #020913 0%, #08172c 46%, #03101c 100%);
 }
 
@@ -286,7 +291,7 @@ a{
   position:absolute;
   width:580px;
   height:580px;
-  background:rgba(245,208,123,.08);
+  background:rgba(137,194,255,.08);
   filter:blur(115px);
   border-radius:50%;
   top:-120px;
@@ -304,13 +309,13 @@ a{
 .hero-badge{
   display:inline-block;
   padding:11px 18px;
-  border:1px solid rgba(245,208,123,.28);
-  background:linear-gradient(135deg, rgba(245,208,123,.16), rgba(255,255,255,.04));
+  border:1px solid rgba(207,217,232,.28);
+  background:linear-gradient(135deg, rgba(207,217,232,.16), rgba(255,255,255,.04));
   border-radius:999px;
   font-size:.92rem;
   margin-bottom:22px;
-  color:#fff2c8;
-  box-shadow:0 10px 28px rgba(245,208,123,.08);
+  color:#edf5ff;
+  box-shadow:0 10px 28px rgba(137,194,255,.08);
   backdrop-filter:blur(10px);
 }
 
@@ -325,7 +330,7 @@ a{
 }
 
 .hero h1 span{
-  background:linear-gradient(135deg, #fff0c4, #f5d07b, #d89d34);
+  background:linear-gradient(135deg, #f7fbff, #d9e8f7, #7fb2e8);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -360,17 +365,17 @@ a{
 }
 
 .btn.primary{
-  background:linear-gradient(135deg, #fff1c3, #f5d07b, #c88519);
-  color:#111827;
+  background:linear-gradient(135deg, #f7fbff, #dce8f7, #8fb3d9);
+  color:#08111f;
   box-shadow:
-    0 16px 42px rgba(245,208,123,.28),
+    0 16px 42px rgba(137,194,255,.22),
     inset 0 1px 0 rgba(255,255,255,.25);
 }
 
 .btn.primary:hover{
   transform:translateY(-4px) scale(1.01);
   box-shadow:
-    0 24px 50px rgba(245,208,123,.34),
+    0 24px 50px rgba(137,194,255,.28),
     inset 0 1px 0 rgba(255,255,255,.25);
 }
 
@@ -383,7 +388,7 @@ a{
 
 .btn.secondary:hover{
   transform:translateY(-4px);
-  border-color:rgba(245,208,123,.24);
+  border-color:rgba(207,217,232,.24);
 }
 
 .hero-points{
@@ -394,7 +399,7 @@ a{
 }
 
 .hero-points i{
-  color:var(--gold2);
+  color:var(--blue2);
   margin-right:8px;
 }
 
@@ -416,7 +421,7 @@ a{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg, transparent 10%, rgba(245,208,123,0.08) 34%, transparent 56%, rgba(90,174,255,0.08) 84%, transparent 100%);
+  background:linear-gradient(135deg, transparent 10%, rgba(207,217,232,0.08) 34%, transparent 56%, rgba(137,194,255,0.08) 84%, transparent 100%);
   pointer-events:none;
 }
 
@@ -531,9 +536,9 @@ a{
   border-radius:var(--radius-lg);
   background:linear-gradient(
     120deg,
-    rgba(245,208,123,0.14),
+    rgba(207,217,232,0.14),
     rgba(255,255,255,0.03),
-    rgba(90,174,255,0.10)
+    rgba(137,194,255,0.10)
   );
   opacity:0;
   transition:.4s;
@@ -578,8 +583,8 @@ a{
   transform:translateY(-10px);
   box-shadow:
     0 30px 70px rgba(0,0,0,.35),
-    0 0 0 1px rgba(245,208,123,.08),
-    0 0 35px rgba(245,208,123,.08);
+    0 0 0 1px rgba(207,217,232,.08),
+    0 0 35px rgba(137,194,255,.10);
 }
 
 .service-card:hover::before,
@@ -595,7 +600,7 @@ a{
 
 .stat h3{
   font-size:2.25rem;
-  background:linear-gradient(90deg,#f5d07b,#ffffff,#5aaeff);
+  background:linear-gradient(90deg,#f5f8ff,#d8e3f1,#7eb4ec);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -603,10 +608,10 @@ a{
 .service-card i,
 .mini-card i,
 .stat i{
-  color:var(--gold2);
+  color:var(--blue1);
   text-shadow:
-    0 0 10px rgba(245,208,123,.35),
-    0 0 20px rgba(90,174,255,.16);
+    0 0 10px rgba(137,194,255,.25),
+    0 0 20px rgba(207,217,232,.16);
 }
 
 .service-card i{
@@ -732,7 +737,7 @@ a{
 }
 
 .contact-list i{
-  color:var(--gold2);
+  color:var(--blue2);
   margin-right:10px;
 }
 
@@ -771,8 +776,8 @@ a{
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-  border-color:rgba(245,208,123,.45);
-  box-shadow:0 0 0 4px rgba(245,208,123,.08);
+  border-color:rgba(137,194,255,.45);
+  box-shadow:0 0 0 4px rgba(137,194,255,.08);
 }
 
 /* =========================
