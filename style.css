@@ -163,19 +163,19 @@ ul{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:12px 0;
+  padding:14px 0;
 }
 
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:14px;
 }
 
 .logo-mark{
-  width:44px;
-  height:44px;
-  border-radius:14px;
+  width:58px;
+  height:58px;
+  border-radius:18px;
   background:
     radial-gradient(circle at 28% 24%, rgba(255,255,255,.38), transparent 18%),
     linear-gradient(145deg, #f7fbff 0%, #dce7f5 26%, #9eb4cf 60%, #5c6f89 100%);
@@ -196,7 +196,7 @@ ul{
   width:100%;
   height:100%;
   object-fit:cover;
-  border-radius:14px;
+  border-radius:18px;
   position:relative;
   z-index:2;
 }
@@ -216,14 +216,14 @@ ul{
 }
 
 .logo h2{
-  font-size:.95rem;
+  font-size:1rem;
   font-weight:800;
   letter-spacing:1px;
   color:#fff;
 }
 
 .logo p{
-  font-size:.72rem;
+  font-size:.75rem;
   color:#d7e3f3;
 }
 
@@ -955,7 +955,7 @@ ul{
 
   .menu{
     position:absolute;
-    top:72px;
+    top:78px;
     left:0;
     width:100%;
     background:#08111f;
@@ -1042,86 +1042,19 @@ ul{
   }
 
   .logo{
-    gap:8px;
+    gap:10px;
   }
 
   .logo h2{
-    font-size:.82rem;
+    font-size:.9rem;
   }
 
   .logo p{
-    font-size:.62rem;
+    font-size:.68rem;
   }
 
   .logo-mark{
-    width:38px;
-    height:38px;
-    border-radius:12px;
-  }
-
-  .logo-mark img{
-    border-radius:12px;
-  }
-}
-/* ===== SIRF LOGO IMAGE CHHOTI, BOX SAME ===== */
-.logo-mark{
-  width:44px !important;
-  height:44px !important;
-  border-radius:14px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:hidden !important;
-}
-
-/* andar ka logo chhota */
-.logo-mark img{
-  width:68% !important;
-  height:68% !important;
-  object-fit:contain !important;
-  border-radius:10px !important;
-  position:relative;
-  z-index:2;
-}
-
-/* text thoda balanced */
-.logo{
-  gap:10px !important;
-}
-
-.logo h2{
-  font-size:.92rem !important;
-  line-height:1.1 !important;
-}
-
-.logo p{
-  font-size:.68rem !important;
-  line-height:1.1 !important;
-}
-
-/* mobile */
-@media (max-width:700px){
-  .logo-mark{
-    width:38px !important;
-    height:38px !important;
-    border-radius:12px !important;
-  }
-
-  .logo-mark img{
-    width:66% !important;
-    height:66% !important;
-    border-radius:8px !important;
-  }
-
-  .logo{
-    gap:8px !important;
-  }
-
-  .logo h2{
-    font-size:.80rem !important;
-  }
-
-  .logo p{
-    font-size:.60rem !important;
+    width:50px;
+    height:50px;
   }
 }
