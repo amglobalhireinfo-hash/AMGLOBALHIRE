@@ -286,7 +286,45 @@ color:#06111d
 .logo h2{font-size:1rem}
 .logo p{font-size:.75rem;color:#9cb3d9}
 
-.menu{display:flex;gap:22px}
+.menu{
+  display:flex;
+  gap:22px;
+}
+
+/* 👇 ADD THIS */
+@media (max-width:980px){
+  .menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#08111f;
+    padding:100px 30px;
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+
+    z-index:9998;
+
+    /* 👇 hidden by default */
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-100%);
+    transition:0.4s ease;
+  }
+
+  .menu.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
+
+  .menu-btn{
+    display:block;
+  }
+}
 .menu a{color:#d8e7ff;font-weight:500}
 .menu a:hover{color:#8fffe0}
 
