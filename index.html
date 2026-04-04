@@ -56,13 +56,19 @@
   }
   </script>
   <script>
-const question = document.querySelector("textarea");
-const btn = document.querySelector("button");
+document.addEventListener("DOMContentLoaded", function(){
 
-btn.disabled = true;
+  const question = document.querySelector(".contact-form textarea");
+  const btn = document.querySelector(".contact-form button");
 
-question.addEventListener("input", () => {
-  btn.disabled = question.value.trim() === "";
+  if(question && btn){
+    btn.disabled = true;
+
+    question.addEventListener("input", () => {
+      btn.disabled = question.value.trim() === "";
+    });
+  }
+
 });
 </script>
 </head>
