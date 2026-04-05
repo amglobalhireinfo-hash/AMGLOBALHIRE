@@ -1,12 +1,10 @@
 // =========================================================
-// AMGLOBALHIRE — FINAL UPGRADED READY TO USE JS
-// Premium • Smooth • Mobile Friendly • WhatsApp Form Ready
+// AMGLOBALHIRE — FINAL READY TO USE JS
+// Clean • Smooth • Premium • Mobile Friendly
 // =========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // =========================================================
-  // SELECTORS
-  // =========================================================
+  // ===== SELECTORS =====
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
   const menuLinks = document.querySelectorAll(".menu a");
@@ -15,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainSite = document.getElementById("main-site");
   const header = document.querySelector(".header");
   const counters = document.querySelectorAll(".counter");
-  const sendDetailsBtn = document.getElementById("sendDetailsBtn");
-  const contactForm = document.getElementById("contactForm");
+  const sendBtn = document.getElementById("sendDetailsBtn");
 
   // =========================================================
   // MOBILE MENU TOGGLE
@@ -128,26 +125,32 @@ document.addEventListener("DOMContentLoaded", () => {
   let counterStarted = false;
 
   function runCounters() {
+    if (counterStarted) return;
+
     const statsSection = document.querySelector(".stats");
-    if (!statsSection || counterStarted) return;
+    if (!statsSection) return;
 
     const sectionTop = statsSection.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight - 100;
-
-    if (sectionTop < triggerPoint) {
+    if (sectionTop < window.innerHeight - 100) {
       counters.forEach(counter => {
         const target = +counter.getAttribute("data-target");
-        const increment = Math.max(1, Math.ceil(target / 100));
-        let current = 0;
+        let count = 0;
+        const speed = Math.max(15, Math.floor(2000 / target));
 
         const updateCounter = () => {
-          current += increment;
+          if (count < target) {
+            count += Math.ceil(target / 80);
+            if (count > target) count = target;
 
-          if (current < target) {
-            counter.innerText = current;
-            requestAnimationFrame(updateCounter);
-          } else {
-            counter.innerText = target;
+            if (target === 95) {
+              counter.innerText = count + "%";
+            } else if (target === 24) {
+              counter.innerText = count + "h";
+            } else {
+              counter.innerText = count + "+";
+            }
+
+            setTimeout(updateCounter, speed);
           }
         };
 
@@ -162,28 +165,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", runCounters);
 
   // =========================================================
-  // WHATSAPP APPLY BUTTONS
+  // WHATSAPP FORM
   // =========================================================
-  const whatsappButtons = document.querySelectorAll(".whatsapp-simple");
-  const whatsappNumber = "919594810744";
-
-  whatsappButtons.forEach(btn => {
-    btn.addEventListener("click", function (e) {
-      if (this.getAttribute("href") === "#" || this.getAttribute("href") === "") {
-        e.preventDefault();
-        const msg = encodeURIComponent(
-          "Hello AMGLOBALHIRE,\n\nI want to apply for job opportunities.\nPlease share available openings."
-        );
-        window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, "_blank");
-      }
-    });
-  });
-
-  // =========================================================
-  // CONTACT FORM -> WHATSAPP MESSAGE
-  // =========================================================
-  if (sendDetailsBtn && contactForm) {
-    sendDetailsBtn.addEventListener("click", () => {
+  if (sendBtn) {
+    sendBtn.addEventListener("click", () => {
       const name = document.getElementById("name")?.value.trim();
       const phone = document.getElementById("phone")?.value.trim();
       const location = document.getElementById("location")?.value.trim();
@@ -191,54 +176,27 @@ document.addEventListener("DOMContentLoaded", () => {
       const experience = document.getElementById("experience")?.value.trim();
 
       if (!name || !phone || !location || !role || !experience) {
-        alert("Please fill all details before sending.");
+        alert("Please fill all details first.");
         return;
       }
 
-      const message = `Hello AMGLOBALHIRE,
+      const message =
+`Hello AMGLOBALHIRE,
 
-I want to apply / share my hiring details.
+My Details:
 
 Name: ${name}
 Phone: ${phone}
 Location: ${location}
-Role/Profile: ${role}
-Experience: ${experience}
+Role Looking For: ${role}
+Experience: ${experience}`;
 
-Please connect with me.`;
-
-      const encodedMessage = encodeURIComponent(message);
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      const whatsappNumber = "919594810744";
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappURL, "_blank");
     });
   }
-
-  // =========================================================
-  // ACTIVE MENU LINK ON SCROLL
-  // =========================================================
-  const sections = document.querySelectorAll("section[id]");
-
-  function activeMenuOnScroll() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(section => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 140;
-      const sectionId = section.getAttribute("id");
-
-      const navLink = document.querySelector(`.menu a[href*="${sectionId}"]`);
-      if (!navLink) return;
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        menuLinks.forEach(link => link.classList.remove("active"));
-        navLink.classList.add("active");
-      }
-    });
-  }
-
-  activeMenuOnScroll();
-  window.addEventListener("scroll", activeMenuOnScroll);
 
   // =========================================================
   // SAFE RESIZE FIX
