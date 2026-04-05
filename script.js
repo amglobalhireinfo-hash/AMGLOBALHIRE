@@ -1,102 +1,135 @@
+// =========================================================
+// AMGLOBALHIRE — FINAL READY TO USE JS
+// Clean • Smooth • Premium • Mobile Friendly
+// =========================================================
 
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== SELECTORS =====
+  const menuBtn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".menu");
+  const menuLinks = document.querySelectorAll(".menu a");
+  const revealElements = document.querySelectorAll(".reveal");
+  const intro = document.getElementById("intro");
+  const mainSite = document.getElementById("main-site");
+  const header = document.querySelector(".header");
 
-if (menuBtn && menu) {
-  menuBtn.addEventListener("click", () => menu.classList.toggle("show"));
-  document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", () => menu.classList.remove("show"));
-  });
-}
+  // =========================================================
+  // MOBILE MENU TOGGLE
+  // =========================================================
+  if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("show");
 
-const reveals = document.querySelectorAll(".reveal");
-function revealOnScroll() {
-  reveals.forEach((el) => {
+      // icon change
+      if (menu.classList.contains("show")) {
+        menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+        document.body.style.overflow = "hidden";
+      } else {
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        document.body.style.overflow = "";
+      }
+    });
+
+    // close menu on link click
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("show");
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        document.body.style.overflow = "";
+      });
+    });
+
+    // close menu if clicked outside (mobile only)
+    document.addEventListener("click", (e) => {
+      const clickedInsideMenu = menu.contains(e.target);
+      const clickedMenuBtn = menuBtn.contains(e.target);
+
+      if (
+        menu.classList.contains("show") &&
+        !clickedInsideMenu &&
+        !clickedMenuBtn &&
+        window.innerWidth <= 980
+      ) {
+        menu.classList.remove("show");
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        document.body.style.overflow = "";
+      }
+    });
+  }
+
+  // =========================================================
+  // REVEAL ON SCROLL
+  // =========================================================
+  function revealOnScroll() {
     const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
 
-    if (elementTop < windowHeight - 100) {
-      el.classList.add("active");
+    revealElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 120;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  revealOnScroll();
+  window.addEventListener("scroll", revealOnScroll);
+
+  // =========================================================
+  // HEADER SCROLL EFFECT
+  // =========================================================
+  function headerEffect() {
+    if (!header) return;
+
+    if (window.scrollY > 40) {
+      header.style.background = "rgba(5,12,24,.88)";
+      header.style.boxShadow = "0 12px 30px rgba(0,0,0,.28)";
     } else {
-      el.classList.remove("active"); // 🔥 add yahi hai
+      header.style.background = "rgba(5,12,24,.68)";
+      header.style.boxShadow = "0 10px 35px rgba(0,0,0,.18)";
+    }
+  }
+
+  headerEffect();
+  window.addEventListener("scroll", headerEffect);
+
+  // =========================================================
+  // INTRO LOGO ANIMATION
+  // =========================================================
+  function startMainSite() {
+    if (mainSite) {
+      mainSite.classList.add("show");
+    }
+    document.body.style.overflow = "";
+  }
+
+  if (intro) {
+    document.body.style.overflow = "hidden";
+
+    setTimeout(() => {
+      intro.style.transition = "opacity 0.8s ease";
+      intro.style.opacity = "0";
+
+      setTimeout(() => {
+        intro.style.display = "none";
+        startMainSite();
+      }, 800);
+    }, 3800); // intro duration
+  } else {
+    startMainSite();
+  }
+
+  // =========================================================
+  // SAFE RESIZE FIX
+  // =========================================================
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980 && menu) {
+      menu.classList.remove("show");
+      if (menuBtn) {
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+      document.body.style.overflow = "";
     }
   });
-}
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
-
-const counters = document.querySelectorAll(".counter");
-let started = false;
-function runCounters() {
-  const stats = document.querySelector(".stats");
-  if (!stats) return;
-  const top = stats.getBoundingClientRect().top;
-  if (top < window.innerHeight - 100 && !started) {
-    started = true;
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      let count = 0;
-      const speed = target / 60;
-      const update = () => {
-        count += speed;
-        if (count < target) {
-          counter.innerText = Math.floor(count) + (target === 95 ? "%" : "+");
-          requestAnimationFrame(update);
-        } else {
-          counter.innerText = target + (target === 95 ? "%" : "+");
-        }
-      };
-      update();
-    });
-  }
-}
-window.addEventListener("scroll", runCounters);
-runCounters();
-
-document.addEventListener("DOMContentLoaded", function () {
-  const whatsappNumber = "919594810744";
-  const simpleMessage = "Hi, I’m interested in applying for a job. Please let me know the available openings. Thank you.";
-
-  document.querySelectorAll(".whatsapp-simple").forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(simpleMessage);
-      window.open(url, "_blank");
-    });
-  });
-
-  const sendDetailsBtn = document.getElementById("sendDetailsBtn");
-  if (sendDetailsBtn) {
-    sendDetailsBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("name")?.value.trim() || "";
-      const phone = document.getElementById("phone")?.value.trim() || "";
-      const location = document.getElementById("location")?.value.trim() || "";
-      const role = document.getElementById("role")?.value.trim() || "";
-      const experience = document.getElementById("experience")?.value.trim() || "";
-
-      const message =
-        "Quick Apply / Hiring Enquiry\n\n" +
-        "1. Your Name: " + name + "\n" +
-        "2. Contact number: " + phone + "\n" +
-        "3. Location / nearest station: " + location + "\n" +
-        "4. Looking for which Profile / Role: " + role + "\n" +
-        "5. Experience or Fresher (if experience - into which profile and number of years): " + experience;
-
-      const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank");
-    });
-  }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const btn = document.getElementById("sendDetailsBtn");
-      if (btn) btn.click();
-    });
-  }
 });
