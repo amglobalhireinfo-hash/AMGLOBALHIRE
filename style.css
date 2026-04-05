@@ -1028,7 +1028,6 @@ p,li,span{
   }
 }
 
-.logo img {
-  height: 40px !important;
-  width: auto;
+.logo-main-nav {
+  height: 40px;
 }
