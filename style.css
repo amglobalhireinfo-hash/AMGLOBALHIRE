@@ -476,3 +476,89 @@ transition:.3s
   opacity:1;
   transform:translateY(0);
 }
+/* ================= TOP HERO (NEW SECTION) ================= */
+
+.top-hero{
+  height:100vh;
+  background:linear-gradient(135deg,#07111f,#0b1730);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* overlay (optional premium feel) */
+.top-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+}
+
+/* content */
+.top-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  padding:20px;
+}
+
+/* LOGO ANIMATION */
+.top-logo{
+  width:120px;
+  margin-bottom:20px;
+  animation:zoomIn 1s ease;
+}
+
+/* TITLE */
+.top-title{
+  font-size:42px;
+  font-weight:800;
+  animation:fadeUp 1.2s ease;
+}
+
+.top-title span{
+  color:#00e0ff;
+}
+
+/* SUBTITLE */
+.top-subtitle{
+  margin-top:10px;
+  font-size:18px;
+  opacity:0.8;
+  animation:fadeUp 1.8s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes zoomIn{
+  from{
+    transform:scale(0.5);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+/* HEADER FLOAT (PREMIUM LOOK) */
+.header{
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:1000;
+  background:transparent;
+}
