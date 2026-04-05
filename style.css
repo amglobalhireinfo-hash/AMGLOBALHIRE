@@ -1,5 +1,5 @@
 /* =========================================================
-   AMGLOBALHIRE — FINAL READY TO USE PREMIUM CSS
+   AMGLOBALHIRE — FINAL ULTRA PREMIUM READY CSS
    Dark Luxury Recruitment Website
    Clean • Responsive • Premium • No Layout Break
 ========================================================= */
@@ -26,6 +26,7 @@ body{
     radial-gradient(circle at 50% 82%, rgba(67,233,123,.06), transparent 20%),
     linear-gradient(180deg,#020817 0%,#07111f 38%,#08162a 70%,#030712 100%);
   background-attachment:fixed;
+  position:relative;
 }
 
 /* subtle animated luxury background */
@@ -64,6 +65,8 @@ a{
 
 .section{
   padding:90px 0;
+  position:relative;
+  z-index:2;
 }
 
 /* ===== COMMON ===== */
@@ -688,6 +691,7 @@ p,li,span{
 
 .map-card iframe{
   border-radius:18px;
+  width:100%;
 }
 
 /* ===== FOOTER ===== */
