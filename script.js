@@ -1,10 +1,12 @@
 // =========================================================
-// AMGLOBALHIRE — FINAL READY TO USE JS
-// Clean • Smooth • Premium • Mobile Friendly
+// AMGLOBALHIRE — FINAL UPGRADED READY TO USE JS
+// Premium • Smooth • Mobile Friendly • WhatsApp Form Ready
 // =========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== SELECTORS =====
+  // =========================================================
+  // SELECTORS
+  // =========================================================
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
   const menuLinks = document.querySelectorAll(".menu a");
@@ -12,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro");
   const mainSite = document.getElementById("main-site");
   const header = document.querySelector(".header");
+  const counters = document.querySelectorAll(".counter");
+  const sendDetailsBtn = document.getElementById("sendDetailsBtn");
+  const contactForm = document.getElementById("contactForm");
 
   // =========================================================
   // MOBILE MENU TOGGLE
@@ -20,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.addEventListener("click", () => {
       menu.classList.toggle("show");
 
-      // icon change
       if (menu.classList.contains("show")) {
         menuBtn.innerHTML = '<i class="fas fa-times"></i>';
         document.body.style.overflow = "hidden";
@@ -30,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // close menu on link click
     menuLinks.forEach(link => {
       link.addEventListener("click", () => {
         menu.classList.remove("show");
@@ -39,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // close menu if clicked outside (mobile only)
     document.addEventListener("click", (e) => {
       const clickedInsideMenu = menu.contains(e.target);
       const clickedMenuBtn = menuBtn.contains(e.target);
@@ -115,10 +117,128 @@ document.addEventListener("DOMContentLoaded", () => {
         intro.style.display = "none";
         startMainSite();
       }, 800);
-    }, 3800); // intro duration
+    }, 3800);
   } else {
     startMainSite();
   }
+
+  // =========================================================
+  // COUNTER ANIMATION
+  // =========================================================
+  let counterStarted = false;
+
+  function runCounters() {
+    const statsSection = document.querySelector(".stats");
+    if (!statsSection || counterStarted) return;
+
+    const sectionTop = statsSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight - 100;
+
+    if (sectionTop < triggerPoint) {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        const increment = Math.max(1, Math.ceil(target / 100));
+        let current = 0;
+
+        const updateCounter = () => {
+          current += increment;
+
+          if (current < target) {
+            counter.innerText = current;
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCounter();
+      });
+
+      counterStarted = true;
+    }
+  }
+
+  runCounters();
+  window.addEventListener("scroll", runCounters);
+
+  // =========================================================
+  // WHATSAPP APPLY BUTTONS
+  // =========================================================
+  const whatsappButtons = document.querySelectorAll(".whatsapp-simple");
+  const whatsappNumber = "919594810744";
+
+  whatsappButtons.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      if (this.getAttribute("href") === "#" || this.getAttribute("href") === "") {
+        e.preventDefault();
+        const msg = encodeURIComponent(
+          "Hello AMGLOBALHIRE,\n\nI want to apply for job opportunities.\nPlease share available openings."
+        );
+        window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, "_blank");
+      }
+    });
+  });
+
+  // =========================================================
+  // CONTACT FORM -> WHATSAPP MESSAGE
+  // =========================================================
+  if (sendDetailsBtn && contactForm) {
+    sendDetailsBtn.addEventListener("click", () => {
+      const name = document.getElementById("name")?.value.trim();
+      const phone = document.getElementById("phone")?.value.trim();
+      const location = document.getElementById("location")?.value.trim();
+      const role = document.getElementById("role")?.value.trim();
+      const experience = document.getElementById("experience")?.value.trim();
+
+      if (!name || !phone || !location || !role || !experience) {
+        alert("Please fill all details before sending.");
+        return;
+      }
+
+      const message = `Hello AMGLOBALHIRE,
+
+I want to apply / share my hiring details.
+
+Name: ${name}
+Phone: ${phone}
+Location: ${location}
+Role/Profile: ${role}
+Experience: ${experience}
+
+Please connect with me.`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  }
+
+  // =========================================================
+  // ACTIVE MENU LINK ON SCROLL
+  // =========================================================
+  const sections = document.querySelectorAll("section[id]");
+
+  function activeMenuOnScroll() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 140;
+      const sectionId = section.getAttribute("id");
+
+      const navLink = document.querySelector(`.menu a[href*="${sectionId}"]`);
+      if (!navLink) return;
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        menuLinks.forEach(link => link.classList.remove("active"));
+        navLink.classList.add("active");
+      }
+    });
+  }
+
+  activeMenuOnScroll();
+  window.addEventListener("scroll", activeMenuOnScroll);
 
   // =========================================================
   // SAFE RESIZE FIX
