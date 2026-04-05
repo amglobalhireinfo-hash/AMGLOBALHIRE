@@ -1038,3 +1038,7 @@ p,li,span{
   padding: 0 !important;
   border: none !important;
 }
+.logo {
+  background: transparent !important;
+  box-shadow: none !important;
+}
