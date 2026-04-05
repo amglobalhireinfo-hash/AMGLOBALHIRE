@@ -1,7 +1,7 @@
 /* =========================================================
-   AMGLOBALHIRE — FINAL CLEAN PREMIUM CSS
-   Premium Dark Luxury Recruitment Website
-   Clean • Responsive • No Layout Change
+   AMGLOBALHIRE — FINAL READY TO USE PREMIUM CSS
+   Dark Luxury Recruitment Website
+   Clean • Responsive • Premium • No Layout Break
 ========================================================= */
 
 /* ===== RESET ===== */
@@ -26,6 +26,25 @@ body{
     radial-gradient(circle at 50% 82%, rgba(67,233,123,.06), transparent 20%),
     linear-gradient(180deg,#020817 0%,#07111f 38%,#08162a 70%,#030712 100%);
   background-attachment:fixed;
+}
+
+/* subtle animated luxury background */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0,224,255,.05), transparent 18%),
+    radial-gradient(circle at 80% 20%, rgba(255,215,0,.04), transparent 18%),
+    radial-gradient(circle at 70% 80%, rgba(67,233,123,.04), transparent 16%);
+  animation:bgFloat 14s ease-in-out infinite alternate;
+  z-index:-1;
+}
+
+@keyframes bgFloat{
+  0%{transform:translateY(0) scale(1);}
+  100%{transform:translateY(-20px) scale(1.03);}
 }
 
 img{
@@ -58,6 +77,7 @@ a{
   font-size:.9rem;
   margin-bottom:16px;
   box-shadow:0 8px 22px rgba(0,0,0,.12);
+  backdrop-filter:blur(10px);
 }
 
 .section-head{
@@ -65,12 +85,24 @@ a{
   margin-bottom:42px;
 }
 
-.section-head h2,
-h2,h3{
+.section-head h2{
   font-size:clamp(1.8rem,4vw,3rem);
   background:linear-gradient(90deg,#ffffff,#dff6ff 35%,#ffd86b 75%,#fff4c7 100%);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+}
+
+h2{
+  font-size:clamp(1.8rem,4vw,3rem);
+  background:linear-gradient(90deg,#ffffff,#dff6ff 35%,#ffd86b 75%,#fff4c7 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+h3{
+  font-size:1.35rem;
+  color:#ffffff;
+  font-weight:700;
 }
 
 p,li,span{
@@ -86,6 +118,7 @@ p,li,span{
   z-index:1000;
   background:rgba(5,12,24,.68);
   backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(255,255,255,.07);
   box-shadow:0 10px 35px rgba(0,0,0,.18);
 }
@@ -121,6 +154,8 @@ p,li,span{
   font-size:1rem;
   color:#ffffff;
   letter-spacing:.4px;
+  background:none;
+  -webkit-text-fill-color:initial;
 }
 
 .logo p{
@@ -131,17 +166,35 @@ p,li,span{
 .menu{
   display:flex;
   gap:22px;
+  align-items:center;
 }
 
 .menu a{
   color:#e6f0ff;
   font-weight:500;
   transition:.3s ease;
+  position:relative;
+}
+
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#00e0ff,#ffd700);
+  transition:.3s ease;
 }
 
 .menu a:hover{
   color:#76f4ff;
   text-shadow:0 0 12px rgba(0,224,255,.35);
+}
+
+.menu a:hover::after{
+  width:100%;
 }
 
 .menu-btn{
@@ -173,6 +226,7 @@ p,li,span{
   z-index:-2;
   filter:saturate(1.08) contrast(1.05);
   pointer-events:none;
+  transform:scale(1.03);
 }
 
 .hero::before{
@@ -222,6 +276,7 @@ p,li,span{
   margin-bottom:20px;
   backdrop-filter:blur(10px);
   color:#dffcff;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .hero h1{
@@ -399,6 +454,28 @@ p,li,span{
   transition:all .35s ease;
 }
 
+.stat::before,
+.service-card::before,
+.process-box::before,
+.testimonial-card::before,
+.about-card::before,
+.contact-card::before,
+.candidate-box::before,
+.form-wrap::before,
+.map-card::before,
+.mini-card::before,
+.logo-row span::before,
+.contact-list a::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(120deg, rgba(255,255,255,.06), transparent 35%, rgba(0,224,255,.03));
+  opacity:0;
+  transition:.35s ease;
+  pointer-events:none;
+}
+
 .stat:hover,
 .service-card:hover,
 .process-box:hover,
@@ -417,6 +494,21 @@ p,li,span{
     0 22px 55px rgba(0,0,0,.38),
     0 0 28px rgba(0,224,255,.10),
     0 0 36px rgba(255,215,0,.08);
+}
+
+.stat:hover::before,
+.service-card:hover::before,
+.process-box:hover::before,
+.testimonial-card:hover::before,
+.about-card:hover::before,
+.contact-card:hover::before,
+.candidate-box:hover::before,
+.form-wrap:hover::before,
+.map-card:hover::before,
+.mini-card:hover::before,
+.logo-row span:hover::before,
+.contact-list a:hover::before{
+  opacity:1;
 }
 
 .stat{
@@ -496,6 +588,7 @@ p,li,span{
   border-radius:28px;
   min-height:340px;
   border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 18px 45px rgba(0,0,0,.24);
 }
 
 .showcase-card img{
@@ -699,7 +792,7 @@ p,li,span{
   display:flex;
   justify-content:center;
   align-items:center;
-  z-index:9999;
+  z-index:99999;
 }
 
 #main-site{
@@ -797,7 +890,9 @@ p,li,span{
     left:0;
     width:100%;
     height:100vh;
-    background:#08111f;
+    background:rgba(8,17,31,.96);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
     padding:100px 30px;
     display:flex;
     flex-direction:column;
@@ -817,6 +912,10 @@ p,li,span{
 
   .menu-btn{
     display:block;
+  }
+
+  .menu a{
+    font-size:1.15rem;
   }
 }
 
@@ -865,5 +964,13 @@ p,li,span{
   .mini-card,
   .logo-row span{
     border-radius:20px;
+  }
+
+  .logo-ultra{
+    width:220px;
+  }
+
+  .glass-card img{
+    min-height:320px;
   }
 }
