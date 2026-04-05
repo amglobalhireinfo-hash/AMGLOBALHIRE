@@ -1027,3 +1027,8 @@ p,li,span{
     min-height:320px;
   }
 }
+
+.logo img {
+  height: 40px !important;
+  width: auto;
+}
