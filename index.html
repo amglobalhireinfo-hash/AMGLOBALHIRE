@@ -173,8 +173,30 @@ a[href*="wa.me"]:hover,a[href*="whatsapp"]:hover,a[href^="mailto:"]:hover{
 .recruitment-gallery .overlay p{margin:6px 0 0; color:var(--muted); font-size:.95rem}
 </style>
 
+
+<style id="ultra-pro-v3">
+.premium-loader{position:fixed;inset:0;background:linear-gradient(135deg,#030712,#071225,#0d1b34);display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .6s ease,visibility .6s ease}
+.premium-loader.hide{opacity:0;visibility:hidden}
+.loader-ring{width:92px;height:92px;border-radius:50%;border:3px solid rgba(255,255,255,.08);border-top-color:#f6d365;animation:spin 1.1s linear infinite;position:relative;box-shadow:0 0 40px rgba(246,211,101,.18)}
+.loader-ring::after{content:"AM";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;letter-spacing:1px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pro-section{max-width:1200px;margin:auto;padding:70px 20px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.pro-card{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:26px;box-shadow:0 25px 80px rgba(0,0,0,.28);backdrop-filter:blur(14px)}
+.pro-card h3{margin:0 0 10px}
+.pro-card p{margin:0;color:#b2c0db;line-height:1.7}
+.counter{font-size:2.1rem;font-weight:800;background:linear-gradient(90deg,#fff,#f6d365,#9face6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.logo-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:28px}
+.logo-box{padding:20px;border-radius:18px;border:1px solid rgba(255,255,255,.1);text-align:center;background:rgba(255,255,255,.04);font-weight:700;color:#dbe7ff}
+.cta-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:30px;border-radius:28px;background:linear-gradient(135deg,rgba(246,211,101,.16),rgba(159,172,230,.14));border:1px solid rgba(255,255,255,.14)}
+.cta-band a{text-decoration:none;padding:14px 24px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:#fff;font-weight:700}
+</style>
+
 </head>
 <body>
+
+<div class="premium-loader" id="premiumLoader"><div class="loader-ring"></div></div>
+
 
 <header class="header">
   <div class="container nav">
@@ -467,6 +489,47 @@ window.addEventListener("load", function(){
     </div>
   </div>
 </section>
+
+
+<section class="pro-section">
+  <div style="text-align:center;margin-bottom:24px">
+    <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-bottom:10px;">Why Companies Choose AM GlobalHire</h2>
+    <p style="max-width:760px;margin:auto;color:#b2c0db">Built for recruitment, staffing, screening, employer trust and premium business presentation.</p>
+  </div>
+  <div class="grid-3">
+    <div class="pro-card"><div class="counter">Fast Hiring</div><h3>Quick Candidate Sourcing</h3><p>Professional recruitment flow for client requirements, job matching and screening support.</p></div>
+    <div class="pro-card"><div class="counter">Verified Talent</div><h3>Quality Staffing Support</h3><p>Stronger company image with modern hiring presentation and trust-building business design.</p></div>
+    <div class="pro-card"><div class="counter">Premium Brand</div><h3>Corporate Presence</h3><p>Luxury recruitment agency feel that looks serious, modern and client-ready on mobile and desktop.</p></div>
+  </div>
+  <div class="logo-strip">
+    <div class="logo-box">IT Hiring</div>
+    <div class="logo-box">BPO Staffing</div>
+    <div class="logo-box">Back Office</div>
+    <div class="logo-box">Remote Jobs</div>
+    <div class="logo-box">Corporate Roles</div>
+    <div class="logo-box">Bulk Hiring</div>
+  </div>
+</section>
+
+<section class="pro-section">
+  <div class="cta-band">
+    <div>
+      <h2 style="margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.4rem)">Need Candidates or Jobs?</h2>
+      <p style="margin:0;color:#d6e2fb">Connect instantly for recruitment, staffing and hiring support.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://wa.me/919594810744" target="_blank">WhatsApp Now</a>
+      <a href="mailto:amglobalhireinfo@gmail.com">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<script>
+window.addEventListener('load', function(){
+  const l=document.getElementById('premiumLoader');
+  if(l){setTimeout(()=>l.classList.add('hide'),700);}
+});
+</script>
 
 </body>
 </html>
