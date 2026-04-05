@@ -708,3 +708,73 @@ transition:.3s
   from{ width:0%; opacity:0; }
   to{ width:100%; opacity:1; }
 }
+
+.logo-real{
+  position: relative;
+  width: 340px;
+  height: auto;
+}
+
+/* ALL PARTS */
+.part{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* A */
+.a{
+  z-index: 1;
+  animation: showA 1s ease forwards;
+}
+
+/* M */
+.m{
+  z-index: 2;
+  animation: showM 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* ARROW */
+.arrow{
+  z-index: 3;
+  animation: showArrow 1.2s ease forwards;
+  animation-delay: 2s;
+}
+
+/* ANIMATIONS */
+
+@keyframes showA{
+  from{
+    opacity:0;
+    transform: scale(0.8) translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes showM{
+  from{
+    opacity:0;
+    transform: scale(0.8) translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes showArrow{
+  from{
+    opacity:0;
+    transform: translateX(-80px) scale(0.9);
+  }
+  to{
+    opacity:1;
+    transform: translateX(0) scale(1);
+  }
+}
