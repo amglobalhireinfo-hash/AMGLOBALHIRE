@@ -1,102 +1,125 @@
-
+// =========================
+// MENU TOGGLE
+// =========================
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
 
 if (menuBtn && menu) {
-  menuBtn.addEventListener("click", () => menu.classList.toggle("show"));
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+
+    const icon = menuBtn.querySelector("i");
+    if (menu.classList.contains("show")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  // Close menu when link clicked
   document.querySelectorAll(".menu a").forEach(link => {
-    link.addEventListener("click", () => menu.classList.remove("show"));
+    link.addEventListener("click", () => {
+      menu.classList.remove("show");
+      const icon = menuBtn.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
   });
 }
 
+// =========================
+// REVEAL ANIMATION
+// =========================
 const reveals = document.querySelectorAll(".reveal");
-function revealOnScroll() {
-  reveals.forEach((el) => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
 
-    if (elementTop < windowHeight - 100) {
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (top < windowHeight - 80) {
       el.classList.add("active");
-    } else {
-      el.classList.remove("active"); // 🔥 add yahi hai
     }
   });
 }
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
 
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+// =========================
+// COUNTER ANIMATION
+// =========================
 const counters = document.querySelectorAll(".counter");
-let started = false;
+let counterStarted = false;
+
 function runCounters() {
-  const stats = document.querySelector(".stats");
-  if (!stats) return;
-  const top = stats.getBoundingClientRect().top;
-  if (top < window.innerHeight - 100 && !started) {
-    started = true;
+  if (counterStarted) return;
+
+  const statsSection = document.querySelector(".stats");
+  if (!statsSection) return;
+
+  const sectionTop = statsSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (sectionTop < windowHeight - 100) {
+    counterStarted = true;
+
     counters.forEach(counter => {
       const target = +counter.getAttribute("data-target");
       let count = 0;
-      const speed = target / 60;
-      const update = () => {
-        count += speed;
+      const speed = Math.max(15, Math.floor(2000 / target));
+
+      const updateCounter = () => {
         if (count < target) {
-          counter.innerText = Math.floor(count) + (target === 95 ? "%" : "+");
-          requestAnimationFrame(update);
+          count += Math.ceil(target / 80);
+          if (count > target) count = target;
+          counter.innerText = count;
+          setTimeout(updateCounter, speed);
         } else {
-          counter.innerText = target + (target === 95 ? "%" : "+");
+          counter.innerText = target;
         }
       };
-      update();
+
+      updateCounter();
     });
   }
 }
+
 window.addEventListener("scroll", runCounters);
-runCounters();
+window.addEventListener("load", runCounters);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const whatsappNumber = "919594810744";
-  const simpleMessage = "Hi, I’m interested in applying for a job. Please let me know the available openings. Thank you.";
+// =========================
+// WHATSAPP FORM
+// =========================
+function sendToWhatsApp(e){
+  e.preventDefault();
 
-  document.querySelectorAll(".whatsapp-simple").forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(simpleMessage);
-      window.open(url, "_blank");
-    });
-  });
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const location = document.getElementById('location').value.trim();
+  const role = document.getElementById('role').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-  const sendDetailsBtn = document.getElementById("sendDetailsBtn");
-  if (sendDetailsBtn) {
-    sendDetailsBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      const name = document.getElementById("name")?.value.trim() || "";
-      const phone = document.getElementById("phone")?.value.trim() || "";
-      const location = document.getElementById("location")?.value.trim() || "";
-      const role = document.getElementById("role")?.value.trim() || "";
-      const experience = document.getElementById("experience")?.value.trim() || "";
+  const text = `Hello AMGLOBALHIRE
 
-      const message =
-        "Quick Apply / Hiring Enquiry\n\n" +
-        "1. Your Name: " + name + "\n" +
-        "2. Contact number: " + phone + "\n" +
-        "3. Location / nearest station: " + location + "\n" +
-        "4. Looking for which Profile / Role: " + role + "\n" +
-        "5. Experience or Fresher (if experience - into which profile and number of years): " + experience;
+Name: ${name}
+Phone: ${phone}
+Location: ${location}
+Role: ${role}
+Message: ${message}`;
 
-      const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank");
-    });
-  }
-});
+  window.open(`https://wa.me/919594810744?text=${encodeURIComponent(text)}`, '_blank');
+}
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const btn = document.getElementById("sendDetailsBtn");
-      if (btn) btn.click();
-    });
+// =========================
+// LOADER
+// =========================
+window.addEventListener("load", function(){
+  const loader = document.getElementById("premiumLoader");
+  if(loader){
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 700);
   }
 });
