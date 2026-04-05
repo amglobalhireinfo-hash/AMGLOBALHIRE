@@ -14,7 +14,12 @@ function revealOnScroll() {
   reveals.forEach((el) => {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
-    if (elementTop < windowHeight - 100) el.classList.add("active");
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active"); // 🔥 add yahi hai
+    }
   });
 }
 window.addEventListener("scroll", revealOnScroll);
