@@ -1031,3 +1031,10 @@ p,li,span{
 .logo-main-nav {
   height: 40px;
 }
+
+.logo-mark {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+}
