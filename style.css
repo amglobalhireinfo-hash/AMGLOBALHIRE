@@ -1,7 +1,7 @@
 /* =========================================================
-   AMGLOBALHIRE — FINAL ULTRA PREMIUM READY CSS
+   AMGLOBALHIRE — FINAL ULTRA CLEAN PREMIUM CSS
    Dark Luxury Recruitment Website
-   Clean • Responsive • Premium • No Layout Break
+   Stable • Responsive • Premium • Ready to Use
 ========================================================= */
 
 /* ===== RESET ===== */
@@ -58,6 +58,10 @@ a{
   color:inherit;
 }
 
+ul{
+  list-style-position:inside;
+}
+
 .container{
   width:min(1120px,92%);
   margin:auto;
@@ -65,8 +69,6 @@ a{
 
 .section{
   padding:90px 0;
-  position:relative;
-  z-index:2;
 }
 
 /* ===== COMMON ===== */
@@ -81,6 +83,7 @@ a{
   margin-bottom:16px;
   box-shadow:0 8px 22px rgba(0,0,0,.12);
   backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
 }
 
 .section-head{
@@ -88,13 +91,7 @@ a{
   margin-bottom:42px;
 }
 
-.section-head h2{
-  font-size:clamp(1.8rem,4vw,3rem);
-  background:linear-gradient(90deg,#ffffff,#dff6ff 35%,#ffd86b 75%,#fff4c7 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
+.section-head h2,
 h2{
   font-size:clamp(1.8rem,4vw,3rem);
   background:linear-gradient(90deg,#ffffff,#dff6ff 35%,#ffd86b 75%,#fff4c7 100%);
@@ -151,6 +148,7 @@ p,li,span{
   box-shadow:
     0 0 18px rgba(0,224,255,.28),
     0 0 32px rgba(79,172,254,.18);
+  flex-shrink:0;
 }
 
 .logo h2{
@@ -158,7 +156,8 @@ p,li,span{
   color:#ffffff;
   letter-spacing:.4px;
   background:none;
-  -webkit-text-fill-color:initial;
+  -webkit-background-clip:initial;
+  -webkit-text-fill-color:#ffffff;
 }
 
 .logo p{
@@ -216,7 +215,7 @@ p,li,span{
   min-height:100vh;
   display:flex;
   align-items:center;
-  padding:100px 0 70px;
+  padding:120px 0 70px;
   overflow:hidden;
 }
 
@@ -278,6 +277,7 @@ p,li,span{
   font-size:.9rem;
   margin-bottom:20px;
   backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
   color:#dffcff;
   box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
@@ -337,6 +337,7 @@ p,li,span{
   cursor:pointer;
   position:relative;
   z-index:5;
+  text-align:center;
 }
 
 .btn:hover{
@@ -363,6 +364,7 @@ p,li,span{
   background:linear-gradient(135deg,rgba(255,215,0,.14),rgba(255,255,255,.06));
   color:#fff5cf;
   backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
 }
 
 .btn.secondary:hover{
@@ -387,6 +389,7 @@ p,li,span{
 .glass-card img{
   border-radius:18px;
   min-height:420px;
+  width:100%;
   object-fit:cover;
   filter:saturate(1.06) contrast(1.03);
 }
@@ -669,6 +672,12 @@ p,li,span{
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
   position:relative;
   z-index:5;
+  font-family:inherit;
+}
+
+.contact-form textarea{
+  min-height:140px;
+  resize:vertical;
 }
 
 .contact-form input:focus,
@@ -690,8 +699,10 @@ p,li,span{
 }
 
 .map-card iframe{
-  border-radius:18px;
   width:100%;
+  min-height:320px;
+  border:0;
+  border-radius:18px;
 }
 
 /* ===== FOOTER ===== */
@@ -811,6 +822,8 @@ p,li,span{
 .logo-ultra{
   position:relative;
   width:300px;
+  max-width:80vw;
+  overflow:hidden;
 }
 
 .logo-main{
@@ -827,13 +840,16 @@ p,li,span{
   width:100%;
   height:100%;
   background:#07111f;
+  top:0;
 }
 
 .logo-ultra::before{
+  left:0;
   animation:revealLeft 1s ease forwards;
 }
 
 .logo-ultra::after{
+  right:0;
   animation:revealRight 1s ease forwards 1s;
 }
 
@@ -846,6 +862,7 @@ p,li,span{
   background:linear-gradient(120deg,transparent,rgba(255,255,255,.6),transparent);
   transform:skewX(-25deg);
   animation:shineMove 1.5s ease forwards 2.2s;
+  pointer-events:none;
 }
 
 @keyframes logoEntry{
@@ -921,6 +938,19 @@ p,li,span{
   .menu a{
     font-size:1.15rem;
   }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .card-grid,
+  .testimonial-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .logo-row{
+    grid-template-columns:repeat(3,1fr);
+  }
 }
 
 @media (max-width:700px){
@@ -937,8 +967,13 @@ p,li,span{
     grid-template-columns:1fr;
   }
 
+  .section{
+    padding:75px 0;
+  }
+
   .hero{
     padding-top:120px;
+    min-height:auto;
   }
 
   .hero h1{
@@ -951,8 +986,14 @@ p,li,span{
     flex-direction:column;
   }
 
+  .btn{
+    width:100%;
+  }
+
   .float-btn{
     right:14px;
+    width:54px;
+    height:54px;
   }
 
   .glass-card,
@@ -976,5 +1017,23 @@ p,li,span{
 
   .glass-card img{
     min-height:320px;
+  }
+
+  .nav{
+    padding:12px 0;
+  }
+
+  .logo{
+    gap:10px;
+  }
+
+  .logo-mark{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+  }
+
+  .logo h2{
+    font-size:.95rem;
   }
 }
