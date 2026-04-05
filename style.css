@@ -476,3 +476,77 @@ transition:.3s
   opacity:1;
   transform:translateY(0);
 }
+/* LOGO ANIMATION */
+.logo{
+  position: relative;
+  font-size: 120px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.letter{
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.a{
+  animation: showA 1s ease forwards;
+}
+
+.m{
+  animation: showM 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.arrow{
+  width: 300px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.arrow path{
+  fill: none;
+  stroke: #0af;
+  stroke-width: 5;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawArrow 1.5s ease forwards;
+  animation-delay: 2s;
+}
+
+.arrow polygon{
+  fill: #0af;
+  opacity: 0;
+  animation: showArrowHead 0.5s ease forwards;
+  animation-delay: 3.2s;
+}
+
+@keyframes showA{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showM{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawArrow{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes showArrowHead{
+  to{
+    opacity: 1;
+  }
+}
