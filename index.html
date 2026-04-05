@@ -71,6 +71,108 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
+
+<style id="ultra-pro-v2">
+:root{
+  --bg:#030712; --bg2:#071225; --bg3:#0d1b34; --card:rgba(255,255,255,.07);
+  --line:rgba(255,255,255,.12); --gold:#f6d365; --gold2:#fda085; --cyan:#74ebd5;
+  --blue:#9face6; --white:#fff; --text:#eef4ff; --muted:#b2c0db;
+  --shadow:0 25px 80px rgba(0,0,0,.38);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif !important;
+  color:var(--text)!important;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(116,235,213,.16), transparent 18%),
+    radial-gradient(circle at 85% 15%, rgba(246,211,101,.16), transparent 20%),
+    radial-gradient(circle at 70% 75%, rgba(159,172,230,.14), transparent 20%),
+    linear-gradient(135deg,var(--bg),var(--bg2),var(--bg3)) !important;
+  background-size:200% 200%;
+  animation:bgShift 18s ease infinite;
+  overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.16) 1px, transparent 1.2px),
+    radial-gradient(circle, rgba(246,211,101,.12) 1px, transparent 1.2px);
+  background-size:120px 120px, 180px 180px;
+  animation:floatDots 24s linear infinite;
+  opacity:.35;
+}
+@keyframes bgShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes floatDots{0%{transform:translateY(0)}50%{transform:translateY(-30px)}100%{transform:translateY(0)}}
+h1,h2,h3,h4,h5,.logo,.brand,.section-title{font-family:'Manrope','Inter',sans-serif!important; letter-spacing:.2px}
+section, .hero, .services, .about, .contact, .why, .stats{position:relative}
+.card,.service-card,.glass,.about-card,.contact-card,.feature-card,.stat-card,.box{
+  background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.04))!important;
+  border:1px solid var(--line)!important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius:24px!important;
+  box-shadow:var(--shadow)!important;
+}
+button,.btn,.cta,.hero-btn,a.btn{
+  border-radius:999px!important;
+  transition:all .35s ease!important;
+  box-shadow:0 12px 35px rgba(0,0,0,.24);
+}
+button:hover,.btn:hover,.cta:hover,a.btn:hover{transform:translateY(-3px) scale(1.02)}
+img{border-radius:24px}
+nav,.navbar,header{
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.floating-contact,.whatsapp-float,.gmail-float,.social-float,.contact-float{
+  position:fixed!important; right:18px; z-index:9999; display:flex; flex-direction:column; gap:12px;
+}
+.whatsapp-float{bottom:92px!important}
+.gmail-float{bottom:24px!important}
+.floating-contact a,.whatsapp-float a,.gmail-float a,.social-float a,.contact-float a,
+a[href*="wa.me"],a[href*="whatsapp"],a[href^="mailto:"]{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:62px; height:62px; border-radius:50%!important;
+  background:linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06))!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  box-shadow:0 18px 45px rgba(0,0,0,.28), inset 0 0 24px rgba(255,255,255,.08);
+  backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+  transition:all .35s ease!important;
+}
+.floating-contact a:hover,.whatsapp-float a:hover,.gmail-float a:hover,.social-float a:hover,.contact-float a:hover,
+a[href*="wa.me"]:hover,a[href*="whatsapp"]:hover,a[href^="mailto:"]:hover{
+  transform:translateY(-5px) scale(1.08) rotate(2deg);
+  box-shadow:0 22px 55px rgba(246,211,101,.24), inset 0 0 28px rgba(255,255,255,.12);
+}
+.hero h1,.hero-title{
+  background:linear-gradient(90deg,#fff,#f6d365,#9face6,#fff);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-size:200% auto; animation:shineText 7s linear infinite;
+}
+@keyframes shineText{to{background-position:200% center}}
+.recruitment-gallery{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; margin:40px 0 10px;
+}
+.recruitment-gallery .gallery-card{
+  position:relative; overflow:hidden; border-radius:28px; min-height:260px;
+  border:1px solid rgba(255,255,255,.14);
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  box-shadow:var(--shadow);
+}
+.recruitment-gallery .gallery-card img{
+  width:100%; height:100%; object-fit:cover; display:block; min-height:260px;
+  transition:transform .8s ease;
+}
+.recruitment-gallery .gallery-card:hover img{transform:scale(1.08)}
+.recruitment-gallery .overlay{
+  position:absolute; inset:0; display:flex; align-items:flex-end; padding:24px;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(3,7,18,.84) 100%);
+}
+.recruitment-gallery .overlay h3{margin:0; font-size:1.2rem}
+.recruitment-gallery .overlay p{margin:6px 0 0; color:var(--muted); font-size:.95rem}
+</style>
+
 </head>
 <body>
 
@@ -341,6 +443,30 @@ window.addEventListener("load", function(){
   }, 5000);
 });
 </script>
+
+
+<section class="gallery-section" style="padding:70px 20px 20px; max-width:1200px; margin:auto;">
+  <div style="text-align:center; margin-bottom:18px;">
+    <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem); margin-bottom:10px;">Premium Recruitment Presence</h2>
+    <p style="max-width:780px; margin:auto; color:var(--muted); font-size:1rem;">
+      Professional hiring brand look for recruitment, staffing, employer outreach and candidate trust.
+    </p>
+  </div>
+  <div class="recruitment-gallery">
+    <div class="gallery-card">
+      <img src="assets/img/recruitment-premium-1.jpg" alt="AM GlobalHire premium recruitment branding">
+      <div class="overlay"><div><h3>Recruitment Excellence</h3><p>Professional hiring & placement identity</p></div></div>
+    </div>
+    <div class="gallery-card">
+      <img src="assets/img/recruitment-premium-2.jpg" alt="AM GlobalHire staffing brand showcase">
+      <div class="overlay"><div><h3>Staffing Solutions</h3><p>Modern, trusted and premium business look</p></div></div>
+    </div>
+    <div class="gallery-card">
+      <img src="assets/img/recruitment-premium-3.jpg" alt="AM GlobalHire corporate recruitment visual">
+      <div class="overlay"><div><h3>Corporate Hiring</h3><p>Strong visual brand for clients and candidates</p></div></div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
