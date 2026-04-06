@@ -1213,3 +1213,190 @@ body{
     transform:scale(.95);
   }
 }
+
+/* =========================================================
+   💎 ULTRA MAX ANIMATION SYSTEM (NEXT LEVEL)
+========================================================= */
+
+/* ===== MOUSE LIGHT EFFECT (GLOBAL) ===== */
+body::after{
+  content:"";
+  position:fixed;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, rgba(0,224,255,.15), transparent 60%);
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  mix-blend-mode:screen;
+  z-index:0;
+  transition:transform .1s linear;
+}
+
+/* ===== HERO TEXT TYPE EFFECT ===== */
+.hero h1{
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:3px solid rgba(255,255,255,.6);
+  animation:typing 3s steps(30,end), blink .7s infinite;
+}
+
+@keyframes typing{
+  from{width:0}
+  to{width:100%}
+}
+
+@keyframes blink{
+  50%{border-color:transparent}
+}
+
+/* ===== CARD 3D HOVER EFFECT ===== */
+.service-card,
+.stat,
+.testimonial-card{
+  transform-style:preserve-3d;
+  perspective:1000px;
+}
+
+.service-card:hover,
+.stat:hover,
+.testimonial-card:hover{
+  transform:
+    rotateX(6deg)
+    rotateY(-6deg)
+    scale(1.04)
+    translateY(-12px);
+}
+
+/* ===== GLOW BORDER ANIMATION ===== */
+.service-card::before,
+.stat::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:inherit;
+  background:linear-gradient(120deg,#00e0ff,#ffd700,#43e97b,#00e0ff);
+  background-size:300% 300%;
+  opacity:0;
+  z-index:-1;
+  animation:borderMove 6s linear infinite;
+}
+
+.service-card:hover::before,
+.stat:hover::before{
+  opacity:.6;
+}
+
+@keyframes borderMove{
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+
+/* ===== BUTTON LIQUID EFFECT ===== */
+.btn.primary{
+  position:relative;
+  overflow:hidden;
+}
+
+.btn.primary::before{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle, rgba(255,255,255,.4), transparent 60%);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  transition:.5s;
+}
+
+.btn.primary:hover::before{
+  transform:translate(-50%,-50%) scale(1);
+}
+
+/* ===== HERO FLOATING PARTICLES ===== */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size:40px 40px;
+  animation:particlesMove 20s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes particlesMove{
+  from{transform:translateY(0)}
+  to{transform:translateY(-100px)}
+}
+
+/* ===== IMAGE PARALLAX HOVER ===== */
+.glass-card img{
+  transition:transform .6s ease;
+}
+
+.glass-card:hover img{
+  transform:scale(1.1) rotate(1deg);
+}
+
+/* ===== NAV LINK MAGNET EFFECT ===== */
+.menu a{
+  transition:.3s;
+}
+
+.menu a:hover{
+  transform:translateY(-2px) scale(1.05);
+}
+
+/* ===== FLOATING ELEMENTS ===== */
+.hero-right{
+  animation:floatHero 6s ease-in-out infinite;
+}
+
+@keyframes floatHero{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-20px)}
+}
+
+/* ===== SCROLL PROGRESS BAR ===== */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:0%;
+  background:linear-gradient(90deg,#00e0ff,#ffd700);
+  z-index:9999;
+  animation:scrollBar linear forwards;
+  animation-timeline:scroll();
+}
+
+@keyframes scrollBar{
+  to{width:100%}
+}
+
+/* ===== PREMIUM TEXT GLOW PULSE ===== */
+h1,h2{
+  animation:textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow{
+  from{
+    text-shadow:0 0 10px rgba(0,224,255,.2);
+  }
+  to{
+    text-shadow:0 0 25px rgba(0,224,255,.5);
+  }
+}
+
+/* ===== LOGO GLOW PULSE ===== */
+.logo-main-nav{
+  animation:logoPulse 3s infinite;
+}
+
+@keyframes logoPulse{
+  0%{filter:drop-shadow(0 0 5px rgba(0,224,255,.3))}
+  50%{filter:drop-shadow(0 0 18px rgba(0,224,255,.6))}
+  100%{filter:drop-shadow(0 0 5px rgba(0,224,255,.3))}
+}
