@@ -1400,3 +1400,62 @@ h1,h2{
   50%{filter:drop-shadow(0 0 18px rgba(0,224,255,.6))}
   100%{filter:drop-shadow(0 0 5px rgba(0,224,255,.3))}
 }
+
+/* ===== HEADER ALIGN & SPACING FIX ===== */
+.header {
+  padding: 10px 0;
+  background:rgba(5,12,24,.85) !important;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* LOGO PERFECT SIZE */
+.logo-mark {
+  width: 60px !important;
+  height: 60px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+.logo-main-nav {
+  width:100%;
+  height: auto;
+  object-fit:contain;
+  filter:drop-shadow(0 0 10px rgba(0,224,255,.4));
+}
+
+/* CENTER ALIGN MENU ITEMS */
+.nav {
+  align-items: center;
+  gap:18px;
+}
+
+/* “GET SUPPORT” BUTTON SPACING */
+.hero-btns a {
+  margin-top: 8px;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  border-radius: 8px;
+}
+
+/* MAKE GET SUPPORT BUTTON MORE PROMINENT */
+.hero-btns a:first-child {
+  background: linear-gradient(135deg,#00e0ff,#007bff,#43e97b);
+  color:#04111d;
+  font-weight:700;
+  box-shadow:
+    0 12px 30px rgba(0,224,255,.22),
+    0 0 20px rgba(0,224,255,.12);
+}
+
+/* RESPONSIVE LOGO FIX (MOBILE) */
+@media (max-width:700px) {
+  .logo-mark {
+    width:50px !important;
+    height:50px !important;
+  }
+  .menu a {
+    font-size:1.1rem;
+  }
+}
