@@ -1459,3 +1459,60 @@ h1,h2{
     font-size:1.1rem;
   }
 }
+/* ===== FIX: REMOVE UNWANTED ZOOM & SHAKE ===== */
+
+/* Stop unwanted horizontal zoom */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Disable hero zoom animation */
+.hero-bg {
+  animation: none !important;
+  transform: scale(1) !important;
+}
+
+/* Remove typing width zoom issue */
+.hero h1 {
+  white-space: normal !important;
+  overflow: visible !important;
+  border-right: none !important;
+  animation: fadeUp 1s ease forwards !important;
+}
+
+/* Disable heavy hover zoom */
+.service-card:hover,
+.stat:hover,
+.testimonial-card:hover {
+  transform: translateY(-6px) !important;
+}
+
+/* Fix image zoom */
+.glass-card:hover img {
+  transform: scale(1.03) !important;
+}
+
+/* Disable global transition lag */
+* {
+  transition: transform .3s ease, box-shadow .3s ease, opacity .3s ease !important;
+}
+
+/* Stop body light follow zoom */
+body::after {
+  display: none !important;
+}
+
+/* Fix floating excessive movement */
+.hero-right {
+  animation: none !important;
+}
+
+/* Reduce float animation intensity */
+.floating-card {
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+@keyframes floatSoft {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
