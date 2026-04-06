@@ -1516,3 +1516,31 @@ body::after {
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-6px)}
 }
+
+/* ===== HERO TOP CUT FIX ===== */
+
+/* Fix iPhone safe area */
+body {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Header height fix */
+.header {
+  height: 70px;
+}
+
+/* Hero proper spacing */
+.hero {
+  padding-top: 140px !important;
+  min-height: calc(100vh - 70px);
+}
+
+/* Mobile fix (IMPORTANT) */
+@media (max-width:700px){
+  .hero {
+    padding-top: 120px !important;
+  }
+}
+.hero-wrap {
+  align-items: center;
+}
