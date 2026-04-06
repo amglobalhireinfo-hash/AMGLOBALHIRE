@@ -317,24 +317,6 @@
   </div>
 
   <script src="script.js"></script>
- <script id="mousefx-real">
-const light = document.createElement("div");
-light.style.position = "fixed";
-light.style.width = "150px";  // kam size
-light.style.height = "150px"; // kam size
-light.style.borderRadius = "50%";
-light.style.pointerEvents = "none";
-light.style.background = "radial-gradient(circle, rgba(0,224,255,.15), transparent 60%)";
-light.style.mixBlendMode = "screen";
-light.style.zIndex = "999";
-light.style.transform = "translate(-50%, -50%)";
-light.style.transition = "left 0.08s linear, top 0.08s linear";  
-document.body.appendChild(light);
 
-document.addEventListener("mousemove", e => {
-  light.style.left = e.clientX + "px";
-  light.style.top = e.clientY + "px";
-});
-</script>
 </body>
 </html>
