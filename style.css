@@ -1042,3 +1042,174 @@ p,li,span{
   background: transparent !important;
   box-shadow: none !important;
 }
+
+/* =========================================================
+   🔥 ULTRA PREMIUM ANIMATION + COLOR BOOST
+   (ADD THIS AT VERY END)
+========================================================= */
+
+/* ===== GLOBAL SMOOTH ===== */
+*{
+  transition: all .3s ease;
+}
+
+/* ===== GRADIENT COLOR BOOST ===== */
+body{
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0,224,255,.15), transparent 25%),
+    radial-gradient(circle at 85% 10%, rgba(255,215,0,.12), transparent 25%),
+    radial-gradient(circle at 50% 85%, rgba(67,233,123,.10), transparent 25%),
+    linear-gradient(180deg,#020817 0%,#07111f 40%,#0a1b34 75%,#020712 100%);
+}
+
+/* ===== HEADER SCROLL EFFECT ===== */
+.header{
+  transition:.4s;
+}
+
+.header.scrolled{
+  background:rgba(3,10,20,.85);
+  backdrop-filter:blur(18px);
+  box-shadow:0 12px 40px rgba(0,0,0,.4);
+}
+
+/* ===== LOGO PREMIUM LOOK ===== */
+.logo-main-nav{
+  height:40px;
+  filter:
+    drop-shadow(0 0 10px rgba(0,224,255,.5))
+    drop-shadow(0 0 18px rgba(255,215,0,.2));
+}
+
+/* ===== HERO TEXT ANIMATION ===== */
+.hero h1{
+  animation:fadeUp 1s ease forwards;
+}
+
+.hero p{
+  animation:fadeUp 1.3s ease forwards;
+}
+
+.hero-btns{
+  animation:fadeUp 1.6s ease forwards;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ===== BUTTON ULTRA GLOW ===== */
+.btn.primary{
+  position:relative;
+  overflow:hidden;
+}
+
+.btn.primary::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:translateX(-100%);
+}
+
+.btn.primary:hover::after{
+  animation:shine 1s;
+}
+
+@keyframes shine{
+  to{transform:translateX(100%)}
+}
+
+/* ===== CARD HOVER PREMIUM ===== */
+.service-card,
+.stat,
+.testimonial-card{
+  position:relative;
+}
+
+.service-card:hover,
+.stat:hover,
+.testimonial-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.5),
+    0 0 40px rgba(0,224,255,.15),
+    0 0 50px rgba(255,215,0,.1);
+}
+
+/* ===== LIGHT SWEEP EFFECT ===== */
+.service-card::after,
+.stat::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.3),transparent);
+  transform:skewX(-25deg);
+}
+
+.service-card:hover::after,
+.stat:hover::after{
+  animation:lightSweep .8s ease;
+}
+
+@keyframes lightSweep{
+  to{left:150%}
+}
+
+/* ===== HERO BACKGROUND MOTION ===== */
+.hero-bg{
+  animation:zoomHero 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero{
+  0%{transform:scale(1.03)}
+  100%{transform:scale(1.1)}
+}
+
+/* ===== FLOAT BUTTON PULSE ===== */
+.float-btn{
+  animation:pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow{
+  0%{box-shadow:0 0 0 0 rgba(0,224,255,.4)}
+  70%{box-shadow:0 0 0 20px rgba(0,224,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(0,224,255,0)}
+}
+
+/* ===== MENU HOVER PREMIUM ===== */
+.menu a:hover{
+  color:#00e0ff;
+  text-shadow:0 0 12px rgba(0,224,255,.6);
+}
+
+/* ===== SCROLL REVEAL SMOOTHER ===== */
+.reveal{
+  transform:translateY(60px);
+}
+
+.reveal.active{
+  transform:translateY(0);
+}
+
+/* ===== LOGO HOVER MICRO ANIMATION ===== */
+.logo-mark:hover{
+  transform:scale(1.08) rotate(5deg);
+}
+
+/* ===== MOBILE TOUCH FEEL ===== */
+@media (max-width:700px){
+  .btn:active{
+    transform:scale(.95);
+  }
+}
